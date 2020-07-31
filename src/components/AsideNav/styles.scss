@@ -1,0 +1,12 @@
+.aside-container {
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .aside-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+}

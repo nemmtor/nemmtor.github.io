@@ -1,0 +1,96 @@
+.header {
+  width: 75%;
+  color: #fff;
+}
+
+.hero {
+  width: 100%;
+  padding: 4rem 0 8rem 0;
+  color: #fff;
+  background-image: url('../../assets/cosmonaut.png');
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+
+  &__heading {
+    font-size: 4rem;
+    max-width: 60%;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      font-size: 0.4em;
+      font-weight: 400;
+      text-transform: none;
+      opacity: 0.9;
+    }
+  }
+
+  &__cta {
+    padding: 0.3rem 0.9rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    img {
+      height: 24px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 70%;
+      transform: translateX(35%);
+      background: #a34bed;
+      z-index: -1;
+    }
+  }
+}
+
+.header__info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  &-item {
+    padding: 2rem 0;
+    height: 150px;
+    opacity: 0.2;
+    position: relative;
+    border-top: 4px solid gray;
+    &:hover {
+      opacity: 1;
+      &::after {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: 0;
+        height: 4px;
+        width: 15%;
+        background: #a34bed;
+      }
+    }
+  }
+
+  &-header {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &-text {
+    max-width: 85%;
+    line-height: 1.4;
+  }
+}
