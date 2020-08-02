@@ -1,15 +1,18 @@
+@import '../../styles/settings.scss';
+
 .header {
-  width: 75%;
+  width: 100%;
   color: #fff;
+  padding-left: 120px;
 }
 
 .hero {
   width: 100%;
-  padding: 4rem 0 8rem 0;
+  padding: 20px 0 100px 0;
   color: #fff;
   background-image: url('../../assets/cosmonaut.png');
   background-repeat: no-repeat;
-  background-position: bottom 0 right 0;
+  background-position: bottom 0 right 70px;
 
   &__heading {
     font-size: 4rem;
@@ -17,6 +20,7 @@
     letter-spacing: 0.05em;
     line-height: 1;
     text-transform: uppercase;
+    margin-bottom: 60px;
 
     span {
       display: block;
@@ -52,8 +56,14 @@
       height: 100%;
       width: 70%;
       transform: translateX(35%);
-      background: #a34bed;
+      background: $main-color;
       z-index: -1;
+      will-change: filter;
+      transition: filter 0.2s ease;
+    }
+
+    &:hover::before {
+      filter: saturate(2);
     }
   }
 }
@@ -64,14 +74,12 @@
   grid-template-columns: 1fr 1fr 1fr;
 
   &-item {
-    padding: 2rem 0;
-    height: 150px;
+    padding-top: 30px;
+    margin-bottom: 50px;
     opacity: 0.2;
     position: relative;
-    border-top: 4px solid gray;
-    &:hover {
-      opacity: 1;
-      &::after {
+    border-top: 4px solid #333;
+    &::after {
         content: '';
         position: absolute;
         top: -4px;
@@ -79,6 +87,12 @@
         height: 4px;
         width: 15%;
         background: #a34bed;
+        opacity: 0;
+      }
+    &:hover {
+      opacity: 1;
+      &::after {
+        opacity: 1;
       }
     }
   }
@@ -86,7 +100,7 @@
   &-header {
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 24px;
   }
 
   &-text {

@@ -1,36 +1,59 @@
+@import '../../styles/settings.scss';
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   width: 100%;
-  height: 5rem;
+  height: 60px;
   background: #0c0c0c;
-  margin-bottom: 2rem;
+  padding: 10px 0;
 
   position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
 
-  .brand {
+  &__brand {
     display: flex;
     padding-left: 1rem;
     align-items: center;
   }
 
-  .logo {
-    height: 4rem;
+  &__logo {
+    height: 36px;
     margin-right: 0.5rem;
   }
 
-  .developer {
+  &__developer {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.05em;
-  }
+  }  
 
-  .burger-container {
+  &__cta {
+    padding: 8px 16px;
+    background: $main-color;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    // transform: translateY(16px);
+    cursor: pointer;
+    text-transform: uppercase;
+    position: absolute;
+    left: calc(50% + 60px);
+    transform: translateX(-50%) translateY(16px);
+    // display: none;
+  }
+}
+
+
+
+
+.burger-container {
     width: 1.5rem;
     height: 1.2rem;
     display: flex;
@@ -50,4 +73,3 @@
       width: 80%;
     }
   }
-}

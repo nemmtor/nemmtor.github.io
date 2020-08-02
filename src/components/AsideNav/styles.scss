@@ -1,12 +1,49 @@
 .aside-container {
+  position: fixed;
+  top: 100px;
+  left: 60px;
+  width: 120px;
+  height: 60vh;
+  padding: 2rem 0;
+}
+
+.aside__bar {
+  width: 2px;
   height: 100%;
-  width: 25%;
+  background: #fff;
+  opacity: 0.3;
   position: absolute;
-  top: 0;
-  left: 0;
-  .aside-nav {
-    position: sticky;
-    top: 0;
-    left: 0;
+  top: 10px;
+  left: 20px;
+}
+
+.aside__list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aside__item {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  position: relative;
+  span:first-child {
+    position: absolute;
+    left: 30px;
+    opacity: 0.5;
+  }
+  span:last-child {
+    opacity: 0;
+  }
+   &--active {
+    span:first-child {
+      opacity: 1;
+      left: -10px;
+    }
+    span:last-child {
+      opacity: 1;
+    }
   }
 }
