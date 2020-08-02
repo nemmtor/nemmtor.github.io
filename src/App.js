@@ -6,6 +6,7 @@ import ContentContainer from './components/ContentContainer';
 import Header from './components/Header';
 import Main from './components/Main';
 import Nav from './components/Nav';
+import Section from './components/Section';
 import Skills from './components/Skills';
 
 export default function App() {
@@ -16,7 +17,9 @@ export default function App() {
         <AsideNav />
         <Header>asd</Header>
         <Main>
-          <Skills />
+          <Section title="What I know">
+            <Skills />
+          </Section>
         </Main>
       </ContentContainer>
     </Container>
