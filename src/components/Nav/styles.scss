@@ -50,14 +50,32 @@
   }
 }
 
-.burger-container {
-  width: 1.5rem;
-  height: 1.2rem;
+.burger {
+  width: 26px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-sizing: content-box;
+  padding: 10px;
   cursor: pointer;
+
+  &.open {
+    .burger-part:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+
+    }
+    .burger-part:nth-child(2){
+      opacity: 0;
+    }
+    .burger-part:nth-child(3){
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
 }
 
 .burger-part {
@@ -65,6 +83,7 @@
   height: 3px;
   background: white;
   position: relative;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 
   &:nth-child(2) {
     width: 80%;

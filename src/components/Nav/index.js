@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import logo from '../../assets/logo.svg';
 import './styles.scss';
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <nav className="nav">
       <div className="nav__brand">
@@ -13,11 +18,15 @@ const Nav = () => {
       <button className="nav__cta" type="button">
         Hire me
       </button>
-      <div className="burger-container">
+      <button
+        type="button"
+        className={`burger ${isOpen ? 'open' : ''}`}
+        onClick={handleClick}
+      >
         <div className="burger-part" />
         <div className="burger-part" />
         <div className="burger-part" />
-      </div>
+      </button>
       <ul className="nav__list">
         <li className="nav__item">Home</li>
         <li className="nav__item">Home</li>
