@@ -18,6 +18,13 @@ const Nav = () => {
         <div className="burger-part" />
         <div className="burger-part" />
       </div>
+      <ul className="nav__list">
+        <li className="nav__item">Home</li>
+        <li className="nav__item">Home</li>
+        <li className="nav__item">Home</li>
+        <li className="nav__item">Home</li>
+        <li className="nav__item">Home</li>
+      </ul>
     </nav>
   );
 };
