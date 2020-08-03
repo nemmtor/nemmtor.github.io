@@ -1,5 +1,21 @@
+.scene {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
 .content-container {
   position: relative;
   width: 100%;
   padding-left: 120px;
+  will-change: transform;
+  transition: transform .2s .3s ease, opacity .2s .3s ease;
+  transform-origin: left;
+}
+
+.scene.rotated {
+  .content-container {
+    transform: rotate3d(0,1,0,10deg) scale(0.8) translateX(-20%) translateY(-20%) translateZ(-50px);
+    transition: transform .2s ease;
+    opacity: 0.4;
+  }
 }

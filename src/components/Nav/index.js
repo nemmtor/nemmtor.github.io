@@ -31,10 +31,10 @@ const Nav = ({ triggerNav }) => {
       </button>
       <ul className={`nav__list ${isOpen ? 'active' : ''}`}>
         <li className="nav__item">Home</li>
-        <li className="nav__item">Home</li>
-        <li className="nav__item">Home</li>
-        <li className="nav__item">Home</li>
-        <li className="nav__item">Home</li>
+        <li className="nav__item">What I know</li>
+        <li className="nav__item">Projects</li>
+        <li className="nav__item">About me</li>
+        <li className="nav__item">Contact</li>
       </ul>
     </nav>
   );

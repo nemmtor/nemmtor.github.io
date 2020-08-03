@@ -19,8 +19,8 @@ export default function App() {
   return (
     <Container>
       <Nav triggerNav={triggerNav} />
+      <AsideNav isNavOpen={isNavOpen} />
       <ContentContainer isNavOpen={isNavOpen}>
-        <AsideNav />
         <Header>asd</Header>
         <Main>
           <Section title="What I know">
