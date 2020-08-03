@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import AsideNav from './components/AsideNav';
 import Container from './components/Container';
@@ -10,10 +10,16 @@ import Section from './components/Section';
 import Skills from './components/Skills';
 
 export default function App() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const triggerNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <Container>
-      <Nav />
-      <ContentContainer>
+      <Nav triggerNav={triggerNav} />
+      <ContentContainer isNavOpen={isNavOpen}>
         <AsideNav />
         <Header>asd</Header>
         <Main>

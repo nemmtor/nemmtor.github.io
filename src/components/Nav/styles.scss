@@ -40,13 +40,11 @@
     color: #fff;
     font-weight: bold;
     letter-spacing: 0.1em;
-    // transform: translateY(16px);
     cursor: pointer;
     text-transform: uppercase;
     position: absolute;
     left: calc(50% + 60px);
     transform: translateX(-50%) translateY(16px);
-    // display: none;
   }
 }
 
@@ -98,6 +96,10 @@
   top: 100%;
   list-style: none;
   opacity: 1;
+
+  &.active {
+    border: 1px solid red;
+  }
 }
 
 .nav__item {

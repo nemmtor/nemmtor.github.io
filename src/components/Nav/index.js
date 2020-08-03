@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import logo from '../../assets/logo.svg';
 import './styles.scss';
 
-const Nav = () => {
+const Nav = ({ triggerNav }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+    triggerNav();
   };
   return (
     <nav className="nav">
@@ -27,7 +29,7 @@ const Nav = () => {
         <div className="burger-part" />
         <div className="burger-part" />
       </button>
-      <ul className="nav__list">
+      <ul className={`nav__list ${isOpen ? 'active' : ''}`}>
         <li className="nav__item">Home</li>
         <li className="nav__item">Home</li>
         <li className="nav__item">Home</li>
@@ -36,6 +38,10 @@ const Nav = () => {
       </ul>
     </nav>
   );
+};
+
+Nav.propTypes = {
+  triggerNav: PropTypes.func.isRequired,
 };
 
 export default Nav;
