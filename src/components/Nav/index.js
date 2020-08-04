@@ -5,9 +5,9 @@ import { Link } from 'react-scroll';
 import logo from '../../assets/logo.svg';
 import './styles.scss';
 
-const SCROLL_DURATION = 500;
+const SCROLL_DURATION = 300;
 const SCROLL_DELAY = 300;
-const SCROLL_OFFSET = -100;
+const SCROLL_OFFSET = -60;
 
 const Nav = ({ triggerNav, sections }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,13 +34,13 @@ const Nav = ({ triggerNav, sections }) => {
       </button>
       <ul className={`nav__list ${isOpen ? 'active' : ''}`}>
         {sections.map((section, index) => (
-          <li>
+          <li key={section.name}>
             <Link
               className="nav__item"
               onClick={handleClick}
               to={section.name}
               smooth
-              duration={SCROLL_DURATION}
+              duration={SCROLL_DURATION + index * 300}
               delay={SCROLL_DELAY}
               offset={SCROLL_OFFSET}
               ignoreCancelEvents
@@ -59,7 +59,6 @@ Nav.propTypes = {
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      component: PropTypes.node.isRequired,
       title: PropTypes.string,
     }),
   ).isRequired,

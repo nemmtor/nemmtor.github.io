@@ -38,7 +38,7 @@ export default function App() {
               return null;
             }
             return (
-              <Section id={name} title={title}>
+              <Section id={name} title={title} key={name}>
                 <Component />
               </Section>
             );
