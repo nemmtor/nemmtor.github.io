@@ -7,7 +7,7 @@ import './styles.scss';
 
 const SCROLL_DURATION = 300;
 const SCROLL_DELAY = 300;
-const SCROLL_OFFSET = -60;
+const SCROLL_OFFSET = -80;
 
 const Nav = ({ triggerNav, sections }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,18 +25,18 @@ const Nav = ({ triggerNav, sections }) => {
 
       <button
         type="button"
-        className={`burger ${isOpen ? 'open' : ''}`}
+        className={`nav__burger ${isOpen ? 'nav__burger--open' : ''}`}
         onClick={handleClick}
       >
-        <div className="burger-part" />
-        <div className="burger-part" />
-        <div className="burger-part" />
+        <div className="nav__burger-part" />
+        <div className="nav__burger-part" />
+        <div className="nav__burger-part" />
       </button>
-      <ul className={`nav__list ${isOpen ? 'active' : ''}`}>
+      <ul className={`nav__list ${isOpen ? 'nav__list--active' : ''}`}>
         {sections.map((section, index) => (
           <li key={section.name}>
             <Link
-              className="nav__item"
+              className="nav__list-item"
               onClick={handleClick}
               to={section.name}
               smooth

@@ -1,27 +1,44 @@
 @import '../../styles/settings.scss';
 
+// TODO: Refactor units, start from here
+
 .header {
-  width: 100%;
   color: #fff;
-  padding-left: 120px;
-  margin-bottom: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 85%;
+}
+
+
+.hero-wrapper {
+  font-size: 1.6rem;
+  background-image: url('../../assets/cosmonaut.png');
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0px;
+  background-size: 31em;
+  width: 100%;
 }
 
 .hero {
-  width: 100%;
-  padding: 120px 0 100px 0;
+  min-height: 45vmin;
   color: #fff;
-  background-image: url('../../assets/cosmonaut.png');
-  background-repeat: no-repeat;
-  background-position: bottom 0 right 70px;
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin: 0 auto;
 
-  &__heading {
-    font-size: 4rem;
-    max-width: 40%;
+  &__title {
+    font-size: 4em;
     letter-spacing: 0.05em;
     line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
+    width: 60%;
+    
 
     span {
       display: block;
@@ -44,6 +61,7 @@
     justify-content: center;
     text-transform: uppercase;
     cursor: pointer;
+    margin-bottom: 10rem;
 
     img {
       height: 24px;
@@ -59,7 +77,6 @@
       transform: translateX(35%);
       background: $main-color;
       z-index: -1;
-      will-change: filter;
       transition: filter 0.2s ease;
     }
 
@@ -69,10 +86,12 @@
   }
 }
 
+// TODO: Add Media Queries for header__info
+
 .header__info {
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  width: 85%;
 
   &-item {
     padding-top: 30px;
@@ -107,5 +126,38 @@
   &-text {
     max-width: 85%;
     line-height: 1.4;
+  }
+}
+
+@media(max-width: 1024px){
+  .header {
+    max-width: 95%;
+  }
+  .hero-wrapper {
+    background-size: 65vmin;
+  }
+  .hero__title {
+    font-size: 9vmin;
+  }
+}
+
+@media(max-width: 900px){
+  .header {
+    max-width: 100%;
+  }
+  .hero-wrapper {
+    background-size: 60vmin;
+  }
+  .hero__title {
+    width: 70%;
+    font-size: 8vmin;
+  }
+}
+@media(max-width: 700px){
+  .hero__title {
+    font-size: 7vmin;
+  }
+  .hero-wrapper {
+    background-size: 50vmin;
   }
 }

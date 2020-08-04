@@ -3,36 +3,28 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const AsideNav = ({ isNavOpen }) => (
-  <aside className={`aside-container ${isNavOpen ? 'hidden' : ''}`}>
+const AsideNav = ({ isNavOpen, sections }) => (
+  <aside className={`aside ${isNavOpen ? 'aside--hidden' : ''}`}>
     <div className="aside__bar" />
     <ul className="aside__list">
-      <li className="aside__item aside__item--active">
-        <span>01</span>
-        <span>Home</span>
-      </li>
-      <li className="aside__item">
-        <span>02</span>
-        <span>What I know</span>
-      </li>
-      <li className="aside__item">
-        <span>03</span>
-        <span>Projects</span>
-      </li>
-      <li className="aside__item">
-        <span>04</span>
-        <span>About me</span>
-      </li>
-      <li className="aside__item">
-        <span>05</span>
-        <span>Contact</span>
-      </li>
+      {sections.map(({ name }, index) => (
+        <li className="aside__section">
+          <span className="aside__section-index">{`0${index + 1}`}</span>
+          <span className="aside__section-name">{name}</span>
+        </li>
+      ))}
     </ul>
   </aside>
 );
 
 AsideNav.propTypes = {
   isNavOpen: PropTypes.bool.isRequired,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      title: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 export default AsideNav;

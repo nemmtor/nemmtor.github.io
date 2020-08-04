@@ -13,18 +13,21 @@ const Header = ({ id }) => {
       offset: -60,
     });
   };
+
   return (
     <header id={id} className="header">
-      <section className="hero">
-        <h1 className="hero__heading">
-          Your next front-end developer
-          <span>Kacper Witas</span>
-        </h1>
-        <button type="button" className="hero__cta" onClick={handleCtaClick}>
-          <span>Hire me</span>
-          <img src={arrow} alt="Arrow right" />
-        </button>
-      </section>
+      <div className="hero-wrapper">
+        <section className="hero">
+          <h1 className="hero__title">
+            Your next front-end developer
+            <span>Kacper Witas</span>
+          </h1>
+          <button type="button" className="hero__cta" onClick={handleCtaClick}>
+            <span>Hire me</span>
+            <img src={arrow} alt="Arrow right" />
+          </button>
+        </section>
+      </div>
       <section className="header__info">
         <article className="header__info-item">
           <h3 className="header__info-header">With high standards</h3>

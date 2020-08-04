@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import {
   AsideNav,
-  Container,
   Content,
   Header,
   Main,
@@ -27,9 +26,9 @@ export default function App() {
   };
 
   return (
-    <Container>
+    <>
       <Nav triggerNav={triggerNav} sections={sections} />
-      <AsideNav isNavOpen={isNavOpen} />
+      <AsideNav isNavOpen={isNavOpen} sections={sections} />
       <Content isNavOpen={isNavOpen}>
         <Header id="home" />
         <Main>
@@ -45,6 +44,6 @@ export default function App() {
           })}
         </Main>
       </Content>
-    </Container>
+    </>
   );
 }

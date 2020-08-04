@@ -1,125 +1,135 @@
 @import '../../styles/settings.scss';
 
+// TODO: Add Media Queries
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  width: 100%;
-  height: 60px;
+  height: 8rem;
   background: #0c0c0c;
-  padding: 20px 0 10px 0;
+  padding: 2rem 0;
 
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 100;
 
   &__brand {
     display: flex;
-    padding-left: 36px;
+    margin-left: 3rem;
     align-items: center;
   }
 
   &__logo {
-    height: 36px;
-    margin-right: 16px;
+    height: 3rem;
   }
 
-  &__developer {
+  &__dev {
+    display: inline-block;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: bold;
+    margin-left: 2rem;
     letter-spacing: 0.05em;
   }
 }
 
-.burger {
-  width: 26px;
-  height: 20px;
+.nav__burger {
+  width: 40px;
+  height: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
   background: transparent;
+  padding: 4px;
   outline: none;
   border: none;
-  box-sizing: content-box;
-  padding: 10px;
   cursor: pointer;
+  position: relative;
 
-  &.open {
-    .burger-part:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
+  &:focus {
+      box-shadow: 0 0 0 3px $main-color;
+  }
+
+  &-part {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: opacity 0.2s 0.2s ease, transform 0.2s 0.2s ease;
+
+    &:nth-child(2){
+      transition: opacity 0.2s 0.2s ease, transform 0.2s 0.2s ease;
+      width: 80%;
     }
-    .burger-part:nth-child(2) {
+  }
+}
+
+.nav__burger--open {
+  .nav__burger-part {
+    &:first-child {
+      transform: translateY(10px) rotate(45deg);
+    }
+    &:nth-child(2){
       opacity: 0;
+      transition: opacity 0.2s ease, transform 0.2s ease;
       transform: translateX(200%);
     }
-    .burger-part:nth-child(3) {
+    &:last-child {
       transform: translateY(-10px) rotate(-45deg);
     }
   }
 }
 
-.burger-part {
-  width: 100%;
-  height: 2px;
-  background: white;
-  position: relative;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-
-  &:nth-child(2) {
-    width: 80%;
-  }
-}
 
 .nav__list {
+  font-size: 1.6rem;
+  border-left: 1px solid $main-color;
   position: absolute;
   padding: 20px 50px;
-  height: 80vh;
   right: 0;
   top: 100%;
+  max-width: 100%;
   list-style: none;
   opacity: 1;
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
   transform: scaleY(0);
   transform-origin: top;
 
-  display: flex;
-  flex-direction: column;
-
-  &.active {
+  &--active {
     opacity: 1;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: opacity 0.3s 0.1s ease-in-out, transform 0.3s 0.1s ease-in-out;
     transform: scaleY(1);
   }
-}
 
-.nav__item {
-  font-size: 48px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  cursor: pointer;
-  display: block;
-  padding: 20px;
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 100%;
-    transition: transform 0.1s linear;
-    transform: scaleX(0);
-    transform-origin: left;
-    z-index: -1;
-    background: $main-color;
-  }
-
-  &:hover {
+  &-item {
+    font-size: 7vmin;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    display: block;
+    padding: 0.5em;
+    position: relative;
     &::after {
-      transform: scaleX(1);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2em;
+      height: 100%;
+      z-index: -1;
+      background: $main-color;
+      transition: transform 0.1s linear;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 }
+
+
