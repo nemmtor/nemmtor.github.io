@@ -8,14 +8,15 @@
   width: 100%;
   padding-left: 120px;
   will-change: transform;
-  transition: transform .2s .3s ease, opacity .2s .3s ease;
+  transition: transform 0.3s 0.8s ease, opacity 0.3s 0.8s ease;
   transform-origin: left;
 }
 
 .scene.rotated {
   .content-container {
-    transform: rotate3d(0,1,0,10deg) scale(0.8) translateX(-20%) translateY(-20%) translateZ(-50px);
-    transition: transform .2s ease;
+    transform: rotate3d(0, 1, 0, 10deg) scale(0.8) translateX(-20%)
+      translateY(-20%) translateZ(-50px);
+    transition: transform 0.2s ease;
     opacity: 0.4;
   }
 }

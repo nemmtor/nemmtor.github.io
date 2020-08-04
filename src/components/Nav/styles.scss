@@ -63,14 +63,13 @@
   cursor: pointer;
 
   &.open {
-    .burger-part:nth-child(1){
+    .burger-part:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
-
     }
-    .burger-part:nth-child(2){
+    .burger-part:nth-child(2) {
       opacity: 0;
     }
-    .burger-part:nth-child(3){
+    .burger-part:nth-child(3) {
       transform: translateY(-9px) rotate(-45deg);
     }
   }
@@ -96,12 +95,16 @@
   top: 100%;
   list-style: none;
   opacity: 1;
-  transition: opacity 0.2s 0.2s ease-in-out, transform 0.2s 0.2s ease-in-out;
+  transition: opacity 0.3s 0.5s ease-in-out, transform 0.3s 0.5s ease-in-out;
   transform: scaleY(0);
   transform-origin: top;
 
+  display: flex;
+  flex-direction: column;
+
   &.active {
     opacity: 1;
+    transition: opacity 0.3s 0.2s ease-in-out, transform 0.3s 0.2s ease-in-out;
     transform: scaleY(1);
   }
 }
@@ -110,4 +113,7 @@
   font-size: 48px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  cursor: pointer;
+  display: block;
+  padding: 20px;
 }

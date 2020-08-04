@@ -7,11 +7,11 @@
   padding: 2rem 0;
   opacity: 1;
   will-change: opacity;
-  transition: opacity .5s .5s ease;
-  
+  transition: opacity 0.5s 0.8s ease;
+
   &.hidden {
     opacity: 0;
-    transition: opacity .2s ease;
+    transition: opacity 0.2s ease;
   }
 }
 
@@ -45,7 +45,7 @@
   span:last-child {
     opacity: 0;
   }
-   &--active {
+  &--active {
     span:first-child {
       opacity: 1;
       left: -10px;

@@ -21,9 +21,9 @@ export default function App() {
       <Nav triggerNav={triggerNav} />
       <AsideNav isNavOpen={isNavOpen} />
       <ContentContainer isNavOpen={isNavOpen}>
-        <Header>asd</Header>
+        <Header id="home" />
         <Main>
-          <Section title="What I know">
+          <Section id="skills" title="What I know">
             <Skills />
           </Section>
         </Main>
