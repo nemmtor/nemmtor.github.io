@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './styles.scss';
 import arrow from '../../assets/arrow-right.svg';
 
-const Header = () => (
-  <header className="header">
+const Header = ({ id }) => (
+  <header id={id} className="header">
     <section className="hero">
       <h1 className="hero__heading">
         Your next front-end developer
@@ -40,5 +41,9 @@ const Header = () => (
     </section>
   </header>
 );
+
+Header.propTypes = {
+  id: PropTypes.string.isRequired,
+};
 
 export default Header;

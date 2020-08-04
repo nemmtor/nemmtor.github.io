@@ -8,7 +8,7 @@
   width: 100%;
   height: 60px;
   background: #0c0c0c;
-  padding: 10px 0;
+  padding: 20px 0 10px 0;
 
   position: sticky;
   top: 0;
@@ -17,20 +17,20 @@
 
   &__brand {
     display: flex;
-    padding-left: 1rem;
+    padding-left: 36px;
     align-items: center;
   }
 
   &__logo {
     height: 36px;
-    margin-right: 0.5rem;
+    margin-right: 16px;
   }
 
   &__developer {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.05em;
-  }  
+  }
 
   &__cta {
     padding: 8px 16px;
@@ -40,36 +40,80 @@
     color: #fff;
     font-weight: bold;
     letter-spacing: 0.1em;
-    // transform: translateY(16px);
     cursor: pointer;
     text-transform: uppercase;
     position: absolute;
     left: calc(50% + 60px);
     transform: translateX(-50%) translateY(16px);
-    // display: none;
   }
 }
 
+.burger {
+  width: 26px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-sizing: content-box;
+  padding: 10px;
+  cursor: pointer;
 
-
-
-.burger-container {
-    width: 1.5rem;
-    height: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-
-  .burger-part {
-    width: 100%;
-    height: 3px;
-    background: white;
-    position: relative;
-
-    &:nth-child(2) {
-      width: 80%;
+  &.open {
+    .burger-part:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .burger-part:nth-child(2) {
+      opacity: 0;
+    }
+    .burger-part:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
     }
   }
+}
+
+.burger-part {
+  width: 100%;
+  height: 3px;
+  background: white;
+  position: relative;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &:nth-child(2) {
+    width: 80%;
+  }
+}
+
+.nav__list {
+  position: absolute;
+  padding: 20px 50px;
+  height: 80vh;
+  right: 0;
+  top: 100%;
+  list-style: none;
+  opacity: 1;
+  transition: opacity 0.3s 0.5s ease-in-out, transform 0.3s 0.5s ease-in-out;
+  transform: scaleY(0);
+  transform-origin: top;
+
+  display: flex;
+  flex-direction: column;
+
+  &.active {
+    opacity: 1;
+    transition: opacity 0.3s 0.2s ease-in-out, transform 0.3s 0.2s ease-in-out;
+    transform: scaleY(1);
+  }
+}
+
+.nav__item {
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  display: block;
+  padding: 20px;
+}
