@@ -1,0 +1,14 @@
+.content {
+  position: relative;
+  width: 100%;
+  padding-left: 120px;
+  will-change: transform;
+  transition: transform 0.3s 0.1s ease, opacity 0.3s 0.1s ease;
+  transform-origin: left;
+
+  &.moved {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+}

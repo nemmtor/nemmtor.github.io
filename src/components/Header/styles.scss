@@ -9,7 +9,7 @@
 
 .hero {
   width: 100%;
-  padding: 20px 0 100px 0;
+  padding: 120px 0 100px 0;
   color: #fff;
   background-image: url('../../assets/cosmonaut.png');
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 
   &__heading {
     font-size: 4rem;
-    max-width: 60%;
+    max-width: 40%;
     letter-spacing: 0.05em;
     line-height: 1;
     text-transform: uppercase;
@@ -81,15 +81,15 @@
     position: relative;
     border-top: 4px solid #333;
     &::after {
-        content: '';
-        position: absolute;
-        top: -4px;
-        left: 0;
-        height: 4px;
-        width: 15%;
-        background: #a34bed;
-        opacity: 0;
-      }
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 0;
+      height: 4px;
+      width: 15%;
+      background: #a34bed;
+      opacity: 0;
+    }
     &:hover {
       opacity: 1;
       &::after {

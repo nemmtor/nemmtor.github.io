@@ -6,10 +6,10 @@ import logo from '../../assets/logo.svg';
 import './styles.scss';
 
 const SCROLL_DURATION = 500;
-const SCROLL_OFFSET = 120;
-const SCROLL_DELAY = 0;
+const SCROLL_DELAY = 300;
+const SCROLL_OFFSET = -100;
 
-const Nav = ({ triggerNav }) => {
+const Nav = ({ triggerNav, sections }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -22,9 +22,6 @@ const Nav = ({ triggerNav }) => {
         <img src={logo} alt="log" className="nav__logo" />
         <span className="nav__dev">Front-End Dev</span>
       </div>
-      <button className="nav__cta" type="button">
-        Hire me
-      </button>
 
       <button
         type="button"
@@ -36,36 +33,22 @@ const Nav = ({ triggerNav }) => {
         <div className="burger-part" />
       </button>
       <ul className={`nav__list ${isOpen ? 'active' : ''}`}>
-        <li>
-          <Link
-            className="nav__item"
-            onClick={handleClick}
-            to="home"
-            smooth
-            duration={SCROLL_DURATION}
-            delay={SCROLL_DELAY}
-            ignoreCancelEvents
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="nav__item"
-            onClick={handleClick}
-            to="skills"
-            smooth
-            duration={SCROLL_DURATION}
-            offset={SCROLL_OFFSET}
-            delay={SCROLL_DELAY}
-            ignoreCancelEvents
-          >
-            What I know
-          </Link>
-        </li>
-        <li className="nav__item">Projects</li>
-        <li className="nav__item">About me</li>
-        <li className="nav__item">Contact</li>
+        {sections.map((section, index) => (
+          <li>
+            <Link
+              className="nav__item"
+              onClick={handleClick}
+              to={section.name}
+              smooth
+              duration={SCROLL_DURATION}
+              delay={SCROLL_DELAY}
+              offset={SCROLL_OFFSET}
+              ignoreCancelEvents
+            >
+              {section.title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
@@ -73,6 +56,13 @@ const Nav = ({ triggerNav }) => {
 
 Nav.propTypes = {
   triggerNav: PropTypes.func.isRequired,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      component: PropTypes.node.isRequired,
+      title: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 export default Nav;

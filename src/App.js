@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 
-import AsideNav from './components/AsideNav';
-import Container from './components/Container';
-import ContentContainer from './components/ContentContainer';
-import Header from './components/Header';
-import Main from './components/Main';
-import Nav from './components/Nav';
-import Section from './components/Section';
-import Skills from './components/Skills';
+import {
+  AsideNav,
+  Container,
+  Content,
+  Header,
+  Main,
+  Nav,
+  Section,
+  Skills,
+} from './components';
+
+const sections = [
+  { name: 'home', Component: Header, title: 'Home' },
+  { name: 'skills', Component: Skills, title: 'What I know' },
+  { name: 'projects', Component: Skills, title: 'Projects' },
+  { name: 'about', Component: Skills, title: 'About me' },
+  { name: 'contact', Component: Skills, title: 'Contact' },
+];
 
 export default function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -18,16 +28,23 @@ export default function App() {
 
   return (
     <Container>
-      <Nav triggerNav={triggerNav} />
+      <Nav triggerNav={triggerNav} sections={sections} />
       <AsideNav isNavOpen={isNavOpen} />
-      <ContentContainer isNavOpen={isNavOpen}>
+      <Content isNavOpen={isNavOpen}>
         <Header id="home" />
         <Main>
-          <Section id="skills" title="What I know">
-            <Skills />
-          </Section>
+          {sections.map(({ name, Component, title }) => {
+            if (name === 'home') {
+              return null;
+            }
+            return (
+              <Section id={name} title={title}>
+                <Component />
+              </Section>
+            );
+          })}
         </Main>
-      </ContentContainer>
+      </Content>
     </Container>
   );
 }
