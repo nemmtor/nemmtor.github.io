@@ -8,7 +8,7 @@ const AsideNav = ({ isNavOpen, sections }) => (
     <div className="aside__bar" />
     <ul className="aside__list">
       {sections.map(({ name }, index) => (
-        <li className="aside__section">
+        <li className="aside__section" key={name}>
           <span className="aside__section-index">{`0${index + 1}`}</span>
           <span className="aside__section-name">{name}</span>
         </li>

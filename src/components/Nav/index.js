@@ -33,19 +33,19 @@ const Nav = ({ triggerNav, sections }) => {
         <div className="nav__burger-part" />
       </button>
       <ul className={`nav__list ${isOpen ? 'nav__list--active' : ''}`}>
-        {sections.map((section, index) => (
-          <li key={section.name}>
+        {sections.map(({ name, title }, index) => (
+          <li key={name}>
             <Link
               className="nav__list-item"
               onClick={handleClick}
-              to={section.name}
+              to={name}
               smooth
               duration={SCROLL_DURATION + index * 300}
               delay={SCROLL_DELAY}
               offset={SCROLL_OFFSET}
               ignoreCancelEvents
             >
-              {section.title}
+              {title}
             </Link>
           </li>
         ))}

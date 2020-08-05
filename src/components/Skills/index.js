@@ -49,10 +49,10 @@ const Skills = () => {
       <article className="skills-type">
         <h3 className="skills-type__title">I feel confident working with</h3>
         <ul className="skills__list">
-          {confident.map((skill) => (
-            <li key={skill.name} className="skills__item">
-              <img className="skills__icon" src={skill.icon} alt={skill.name} />
-              <span className="skills__name">{skill.name}</span>
+          {confident.map(({ name, icon }) => (
+            <li key={name} className="skills__item">
+              <img className="skills__icon" src={icon} alt={name} />
+              <span className="skills__name">{name}</span>
             </li>
           ))}
         </ul>
@@ -60,10 +60,10 @@ const Skills = () => {
       <article className="skills-type">
         <h3 className="skills-type__title">I am currently learning</h3>
         <ul className="skills__list">
-          {currentlyLearning.map((skill) => (
-            <li key={skill.name} className="skills__item">
-              <img className="skills__icon" src={skill.icon} alt={skill.name} />
-              <span className="skills__name">{skill.name}</span>
+          {currentlyLearning.map(({ name, icon }) => (
+            <li key={name} className="skills__item">
+              <img className="skills__icon" src={icon} alt={name} />
+              <span className="skills__name">{name}</span>
             </li>
           ))}
         </ul>
@@ -71,10 +71,10 @@ const Skills = () => {
       <article className="skills-type">
         <h3 className="skills-type__title">Tools that I use</h3>
         <ul className="skills__list">
-          {tools.map((skill) => (
-            <li key={skill.name} className="skills__item">
-              <img className="skills__icon" src={skill.icon} alt={skill.name} />
-              <span className="skills__name">{skill.name}</span>
+          {tools.map(({ name, icon }) => (
+            <li key={name} className="skills__item">
+              <img className="skills__icon" src={icon} alt={name} />
+              <span className="skills__name">{name}</span>
             </li>
           ))}
         </ul>

@@ -11,18 +11,17 @@
   max-width: 85%;
 }
 
-
 .hero-wrapper {
   font-size: 1.6rem;
   background-image: url('../../assets/cosmonaut.png');
   background-repeat: no-repeat;
-  background-position: bottom 0 right 0px;
+  background-position: bottom 0 right 0;
   background-size: 31em;
   width: 100%;
 }
 
 .hero {
-  min-height: 45vmin;
+  min-height: 45rem;
   color: #fff;
   display: flex;
   width: 85%;
@@ -37,8 +36,7 @@
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 6rem;
-    width: 60%;
-    
+    max-width: 6em;
 
     span {
       display: block;
@@ -89,14 +87,15 @@
 // TODO: Add Media Queries for header__info
 
 .header__info {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
 
   &-item {
-    padding-top: 30px;
-    margin-bottom: 50px;
-    opacity: 0.2;
+    padding: 1.5em 1em 1em 0;
+    flex: 1 1 250px;
+    opacity: 0.7;
     position: relative;
     border-top: 4px solid #333;
     &::after {
@@ -124,40 +123,57 @@
   }
 
   &-text {
-    max-width: 85%;
     line-height: 1.4;
+    max-width: 15em;
   }
 }
 
-@media(max-width: 1024px){
-  .header {
-    max-width: 95%;
-  }
+@media (max-width: 1024px) {
   .hero-wrapper {
-    background-size: 65vmin;
-  }
-  .hero__title {
-    font-size: 9vmin;
+    font-size: 1.5rem;
   }
 }
 
-@media(max-width: 900px){
-  .header {
-    max-width: 100%;
-  }
+@media (max-width: 980px) {
   .hero-wrapper {
-    background-size: 60vmin;
-  }
-  .hero__title {
-    width: 70%;
-    font-size: 8vmin;
+    font-size: 1.4rem;
   }
 }
-@media(max-width: 700px){
-  .hero__title {
-    font-size: 7vmin;
+
+@media (max-width: 900px) {
+  .hero-wrapper {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-wrapper {
+    background-size: 25em;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: auto;
   }
   .hero-wrapper {
-    background-size: 50vmin;
+    background-size: 20em;
+  }
+  .header__info-item {
+    text-align: center;
+    padding: 1em 0;
+  }
+  .header__info-text {
+    margin: 0 auto;
+    max-width: 20em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-wrapper {
+    background-size: 15em;
+  }
+  .hero__title {
+    font-size: 3em;
   }
 }
