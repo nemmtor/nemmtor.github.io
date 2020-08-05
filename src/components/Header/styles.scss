@@ -48,15 +48,16 @@
   }
 
   &__cta {
-    padding: 0.3rem 0.9rem;
     color: #fff;
     background: transparent;
     border: none;
     outline: none;
     position: relative;
+    height: 50px;
+    width: 150px;
+    font-size: 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
     text-transform: uppercase;
     cursor: pointer;
     margin-bottom: 10rem;
@@ -71,8 +72,8 @@
       top: 0;
       left: 0;
       height: 100%;
-      width: 70%;
-      transform: translateX(35%);
+      width: 80%;
+      transform: translateX(15px);
       background: $main-color;
       z-index: -1;
       transition: filter 0.2s ease;
