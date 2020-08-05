@@ -62,6 +62,10 @@
     cursor: pointer;
     margin-bottom: 10rem;
 
+    &:focus {
+      border: 2px solid $main-color;
+    }
+
     img {
       height: 24px;
     }
@@ -109,7 +113,8 @@
       background: #a34bed;
       opacity: 0;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 1;
       &::after {
         opacity: 1;

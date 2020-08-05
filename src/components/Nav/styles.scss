@@ -109,6 +109,11 @@
     display: block;
     padding: 0.5em;
     position: relative;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+
     &::after {
       content: '';
       position: absolute;
@@ -123,7 +128,8 @@
       transform-origin: left;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       &::after {
         transform: scaleX(1);
       }
