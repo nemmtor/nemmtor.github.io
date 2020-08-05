@@ -8,12 +8,13 @@
   align-items: center;
   height: 8rem;
   background: #0c0c0c;
-  padding: 2rem 0;
+  padding: 2rem 5rem;
 
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
+  width: 100%;
 
   &__brand {
     display: flex;
@@ -128,5 +129,11 @@
         transform: scaleX(1);
       }
     }
+  }
+}
+
+@media (max-width: 450px) {
+  .nav {
+    padding: 1rem 0;
   }
 }
