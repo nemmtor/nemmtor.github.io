@@ -88,13 +88,13 @@
 // TODO: Add Media Queries for header__info
 
 .header__info {
-  width: 85%;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  text-align: center;
 
   &-item {
-    padding: 1.5em 1em 1em 0;
+    padding: 2rem;
     flex: 1 1 250px;
     opacity: 0.7;
     position: relative;
@@ -125,7 +125,6 @@
 
   &-text {
     line-height: 1.4;
-    max-width: 15em;
   }
 }
 
@@ -162,14 +161,6 @@
   }
   .hero-wrapper {
     background-size: 20em;
-  }
-  .header__info-item {
-    text-align: center;
-    padding: 1em 0;
-  }
-  .header__info-text {
-    margin: 0 auto;
-    max-width: 20em;
   }
 }
 
