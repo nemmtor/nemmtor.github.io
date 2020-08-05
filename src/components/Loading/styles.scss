@@ -1,0 +1,39 @@
+@import '../../styles/settings.scss';
+
+.loading {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__spinner {
+    pointer-events: none;
+    width: 10em;
+    height: 10em;
+    border: 1em solid transparent;
+    border-color: #eee;
+    border-top-color: $main-color;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-top: 4rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 4rem;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
