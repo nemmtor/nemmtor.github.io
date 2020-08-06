@@ -17,8 +17,8 @@ const Nav = ({ triggerNav, sections }) => {
   const burger = useRef();
 
   const toggleNav = () => {
-    setIsOpen(!isOpen);
     triggerNav();
+    setIsOpen(!isOpen);
   };
 
   const handleClick = (index, name) => {
@@ -32,8 +32,11 @@ const Nav = ({ triggerNav, sections }) => {
   };
 
   // For trapping focus inside nav
-  const handleTab = (e, index) => {
-    if (index !== 0 && index !== sections.length - 1) return;
+  const handleKeyDown = (e, index) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      e.target.click();
+    }
 
     // Handle tab for first item
     if (index === 0) {
@@ -85,7 +88,7 @@ const Nav = ({ triggerNav, sections }) => {
             <Link
               title={title}
               onClick={() => handleClick(index, name)}
-              onKeyDown={(e) => handleTab(e, index)}
+              onKeyDown={(e) => handleKeyDown(e, index)}
               isOpen={isOpen}
             >
               {title}
