@@ -9,6 +9,7 @@
   height: 8rem;
   background: #0c0c0c;
   padding: 2rem 5rem;
+  box-shadow: 0 0 4px 0px $main-color;
 
   position: fixed;
   top: 0;
@@ -83,7 +84,7 @@
 
 .nav__list {
   font-size: 1.6rem;
-  border-left: 1px solid $main-color;
+  // border-left: 1px solid $main-color;
   position: absolute;
   padding: 20px 50px;
   right: 0;
@@ -134,6 +135,13 @@
         transform: scaleX(1);
       }
     }
+  }
+}
+
+.nav__list-item--active {
+  color: $main-color;
+  &::after{
+    background: #fff;
   }
 }
 

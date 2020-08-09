@@ -3,21 +3,29 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const AsideNav = ({ isNavOpen, sections }) => (
-  <aside className={`aside ${isNavOpen ? 'aside--hidden' : ''}`}>
-    <div className="aside__bar" />
-    <ul className="aside__list">
-      {sections.map(({ name }, index) => (
-        <li className="aside__section" key={name}>
-          <span className="aside__section-index">{`0${index + 1}`}</span>
-          <span className="aside__section-name">{name}</span>
-        </li>
-      ))}
-    </ul>
-  </aside>
-);
+const AsideNav = ({ isNavOpen, sections, currentSection }) => {
+  return (
+    <aside className={`aside ${isNavOpen ? 'aside--hidden' : ''}`}>
+      <div className="aside__bar" />
+      <ul className="aside__list">
+        {sections.map(({ title, name }, index) => (
+          <li
+            className={`aside__section ${
+              currentSection === name ? 'aside__section--active' : ''
+            }`}
+            key={name}
+          >
+            <span className="aside__section-index">{`0${index + 1}`}</span>
+            <span className="aside__section-name">{title}</span>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
+};
 
 AsideNav.propTypes = {
+  currentSection: PropTypes.string,
   isNavOpen: PropTypes.bool.isRequired,
   sections: PropTypes.arrayOf(
     PropTypes.shape({
@@ -25,6 +33,10 @@ AsideNav.propTypes = {
       title: PropTypes.string,
     }),
   ).isRequired,
+};
+
+AsideNav.defaultProps = {
+  currentSection: 'asd',
 };
 
 export default AsideNav;

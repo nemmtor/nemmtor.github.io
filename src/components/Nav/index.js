@@ -1,18 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { useState, useRef } from 'react';
-import { scroller } from 'react-scroll';
 
 import logo from '../../assets/logo.svg';
 import './styles.scss';
 import Link from './Link';
 
-const SCROLL_DURATION = 300;
-const SCROLL_DELAY = 300;
-const SCROLL_OFFSET = -80;
-
-// TODO: FIX ENTER ON LAST LINK
-
-const Nav = ({ triggerNav, sections }) => {
+const Nav = ({ triggerNav, sections, setCurrentSection }) => {
   const [isOpen, setIsOpen] = useState(false);
   const burger = useRef();
 
@@ -21,13 +14,7 @@ const Nav = ({ triggerNav, sections }) => {
     setIsOpen(!isOpen);
   };
 
-  const handleClick = (index, name) => {
-    scroller.scrollTo(name, {
-      duration: SCROLL_DURATION + index * 300,
-      delay: SCROLL_DELAY,
-      offset: SCROLL_OFFSET,
-      smooth: true,
-    });
+  const handleClick = (name) => {
     toggleNav();
   };
 
@@ -87,9 +74,11 @@ const Nav = ({ triggerNav, sections }) => {
           <li key={name} role="none">
             <Link
               title={title}
-              onClick={() => handleClick(index, name)}
+              name={name}
+              onClick={() => handleClick(name)}
               onKeyDown={(e) => handleKeyDown(e, index)}
               isOpen={isOpen}
+              setCurrentSection={setCurrentSection}
             >
               {title}
             </Link>
@@ -102,6 +91,7 @@ const Nav = ({ triggerNav, sections }) => {
 
 Nav.propTypes = {
   triggerNav: PropTypes.func.isRequired,
+  setCurrentSection: PropTypes.func.isRequired,
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
