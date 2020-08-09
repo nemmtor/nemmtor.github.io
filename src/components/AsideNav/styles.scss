@@ -20,7 +20,7 @@
     opacity: 0.3;
     position: absolute;
     top: 10px;
-    left: 25px;
+    left: 17px;
   }
 
   &__list {
@@ -41,10 +41,15 @@
     position: absolute;
     left: 30px;
     opacity: 0.5;
+    transition: transform .5s ease;
   }
 
   &__section-name {
     opacity: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transition: transform .5s .2s ease, opacity .5s .2s ease;
+    transform: translateX(30px);
   }
 
 }
@@ -52,11 +57,12 @@
 .aside__section--active {
   .aside__section-index {
     opacity: 1;
-    left: -10px;
+    transform: translateX(-40px);
   }
 
   .aside__section-name {
     opacity: 1;
+    transform: translateX(0);
   }
 }
 

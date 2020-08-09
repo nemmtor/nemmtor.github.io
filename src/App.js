@@ -20,6 +20,7 @@ const sections = [
 
 export default function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [currentSection, setCurrentSection] = useState();
 
   const triggerNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -27,8 +28,16 @@ export default function App() {
 
   return (
     <>
-      <Nav triggerNav={triggerNav} sections={sections} />
-      <AsideNav isNavOpen={isNavOpen} sections={sections} />
+      <Nav
+        triggerNav={triggerNav}
+        sections={sections}
+        setCurrentSection={setCurrentSection}
+      />
+      <AsideNav
+        isNavOpen={isNavOpen}
+        sections={sections}
+        currentSection={currentSection}
+      />
       <Content isNavOpen={isNavOpen}>
         <Header id="home" />
         <Main>
