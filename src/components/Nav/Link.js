@@ -28,6 +28,7 @@ const Link = ({
     onSetActive={() => {
       setCurrentSection(name);
     }}
+    role="menuitem"
     spy
   >
     {title}
