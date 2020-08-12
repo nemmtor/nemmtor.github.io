@@ -6,6 +6,7 @@ import {
   Header,
   Main,
   Nav,
+  Projects,
   Section,
   Skills,
 } from './components';
@@ -13,7 +14,7 @@ import {
 const sections = [
   { name: 'home', Component: Header, title: 'Home' },
   { name: 'skills', Component: Skills, title: 'What I know' },
-  { name: 'projects', Component: Skills, title: 'Projects' },
+  { name: 'projects', Component: Projects, title: 'Projects' },
   { name: 'about', Component: Skills, title: 'About me' },
   { name: 'contact', Component: Skills, title: 'Contact' },
 ];
