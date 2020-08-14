@@ -103,7 +103,7 @@
   }
 
   &-item {
-    font-size: 7vmin;
+    font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     cursor: pointer;
@@ -140,7 +140,7 @@
 
 .nav__list-item--active {
   color: $main-color;
-  &::after{
+  &::after {
     background: #fff;
   }
 }

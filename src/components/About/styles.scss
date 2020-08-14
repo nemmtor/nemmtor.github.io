@@ -1,18 +1,38 @@
+@import '../../styles/settings.scss';
+
 .about {
-  max-width: 85%;
-  &__img {
+  max-width: 90%;
+  &__img-container {
     width: 250px;
-    align-self: flex-start;
+    height: 250px;
+    border-radius: 50%;
+    shape-outside: circle();
     float: right;
-    padding: 0 2.5rem 2.5rem;
+    overflow: hidden;
+    margin: 1rem;
+  }
+  &__img {
+    width: 100%;
+    transform: translateY(-30px);
   }
   &__text {
     display: inline;
     line-height: 1.5;
 
-    span {
+    &-part {
       display: block;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
+      strong {
+        color: $main-color;
+      }
     }
+  }
+
+  &__cta {
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: $main-color;
   }
 }
