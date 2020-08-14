@@ -11,7 +11,6 @@ import phpIcon from '../../assets/php.svg';
 import prestaIcon from '../../assets/presta.png';
 import babelIcon from '../../assets/babel.svg';
 import gimpIcon from '../../assets/gimp.svg';
-import herokuIcon from '../../assets/heroku.svg';
 import npmIcon from '../../assets/npm.svg';
 import styledcomponents from '../../assets/styledcomponents.png';
 import webpackIcon from '../../assets/webpack.svg';
@@ -37,7 +36,6 @@ const currentlyLearning = [
 const tools = [
   { name: 'babel', icon: babelIcon },
   { name: 'gimp', icon: gimpIcon },
-  { name: 'heroku', icon: herokuIcon },
   { name: 'npm & yarn', icon: npmIcon },
   { name: 'webpack', icon: webpackIcon },
   { name: 'trello', icon: trelloIcon },
