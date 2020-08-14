@@ -1,44 +1,47 @@
 import React from 'react';
 
-import htmlIcon from '../../assets/html.svg';
-import sassIcon from '../../assets/sass.svg';
-import jsIcon from '../../assets/javascript.svg';
-import reactIcon from '../../assets/react.svg';
-import gitIcon from '../../assets/git.svg';
-import materialIcon from '../../assets/material.png';
-import tsIcon from '../../assets/typescript.svg';
-import phpIcon from '../../assets/php.svg';
-import prestaIcon from '../../assets/presta.png';
-import babelIcon from '../../assets/babel.svg';
-import gimpIcon from '../../assets/gimp.svg';
-import npmIcon from '../../assets/npm.svg';
-import styledcomponents from '../../assets/styledcomponents.png';
-import webpackIcon from '../../assets/webpack.svg';
-import trelloIcon from '../../assets/trello.svg';
+import {
+  babel,
+  gimp,
+  git,
+  html,
+  javascript,
+  material,
+  npm,
+  php,
+  presta,
+  react,
+  sass,
+  styled,
+  trello,
+  typescript,
+  webpack,
+} from 'assets/tech-icons';
+
 import './styles.scss';
 
 const confident = [
-  { name: 'html5', icon: htmlIcon },
-  { name: 'css3/scss', icon: sassIcon },
-  { name: 'javascript', icon: jsIcon },
-  { name: 'react', icon: reactIcon },
-  { name: 'git', icon: gitIcon },
-  { name: 'styled components', icon: styledcomponents },
-  { name: 'material ui', icon: materialIcon },
+  { name: 'html5', icon: html },
+  { name: 'css3/scss', icon: sass },
+  { name: 'javascript', icon: javascript },
+  { name: 'react', icon: react },
+  { name: 'git', icon: git },
+  { name: 'styled components', icon: styled },
+  { name: 'material ui', icon: material },
 ];
 
 const currentlyLearning = [
-  { name: 'typescript', icon: tsIcon },
-  { name: 'php', icon: phpIcon },
-  { name: 'prestashop', icon: prestaIcon },
+  { name: 'typescript', icon: typescript },
+  { name: 'php', icon: php },
+  { name: 'prestashop', icon: presta },
 ];
 
 const tools = [
-  { name: 'babel', icon: babelIcon },
-  { name: 'gimp', icon: gimpIcon },
-  { name: 'npm & yarn', icon: npmIcon },
-  { name: 'webpack', icon: webpackIcon },
-  { name: 'trello', icon: trelloIcon },
+  { name: 'babel', icon: babel },
+  { name: 'gimp', icon: gimp },
+  { name: 'npm & yarn', icon: npm },
+  { name: 'webpack', icon: webpack },
+  { name: 'trello', icon: trello },
 ];
 
 const Skills = () => {

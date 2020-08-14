@@ -32,6 +32,15 @@
     "plugins": [
       "prettier"
     ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": [
+            "src"
+          ]
+        }
+      }
+    },
     "rules": {
       "prettier/prettier": "error",
       "linebreak-style": 0,

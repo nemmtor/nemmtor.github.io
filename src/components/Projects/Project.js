@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import arrowUp from '../../assets/arrow-up.svg';
-import github from '../../assets/github.png';
-import world from '../../assets/world.svg';
+import { upArrow, world } from 'assets';
+import { github } from 'assets/tech-icons';
 
 const Project = ({ details }) => {
   const { img, title, description, urls, stack } = details;
@@ -25,7 +24,7 @@ const Project = ({ details }) => {
         }`}
       >
         <button type="button" className="project__toggle" onClick={toggle}>
-          <img src={arrowUp} alt="Arrow up" />
+          <img src={upArrow} alt="Arrow up" />
         </button>
 
         <h4 className="project__title">{title}</h4>

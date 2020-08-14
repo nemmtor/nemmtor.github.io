@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { scroller } from 'react-scroll';
 
 import './styles.scss';
-import arrow from '../../assets/arrow-right.svg';
+import { rightArrow } from 'assets';
 
 const Header = ({ id }) => {
   const handleCtaClick = () => {
@@ -24,7 +24,7 @@ const Header = ({ id }) => {
           </h1>
           <button type="button" className="hero__cta" onClick={handleCtaClick}>
             <span>Hire me</span>
-            <img src={arrow} alt="Arrow right" />
+            <img src={rightArrow} alt="Arrow right" />
           </button>
         </section>
       </div>
