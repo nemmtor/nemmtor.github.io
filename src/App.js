@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import {
   AsideNav,
+  About,
   Content,
   Header,
   Main,
@@ -15,7 +16,7 @@ const sections = [
   { name: 'home', Component: Header, title: 'Home' },
   { name: 'skills', Component: Skills, title: 'What I know' },
   { name: 'projects', Component: Projects, title: 'Projects' },
-  { name: 'about', Component: Skills, title: 'About me' },
+  { name: 'about', Component: About, title: 'About me' },
   { name: 'contact', Component: Skills, title: 'Contact' },
 ];
 

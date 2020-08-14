@@ -5,7 +5,6 @@ import sassIcon from '../../assets/sass.svg';
 import jsIcon from '../../assets/javascript.svg';
 import reactIcon from '../../assets/react.svg';
 import gitIcon from '../../assets/git.svg';
-import bsIcon from '../../assets/bootstrap.svg';
 import materialIcon from '../../assets/material.png';
 import tsIcon from '../../assets/typescript.svg';
 import phpIcon from '../../assets/php.svg';
@@ -26,7 +25,6 @@ const confident = [
   { name: 'react', icon: reactIcon },
   { name: 'git', icon: gitIcon },
   { name: 'styled components', icon: styledcomponents },
-  { name: 'bootstrap', icon: bsIcon },
   { name: 'material ui', icon: materialIcon },
 ];
 
