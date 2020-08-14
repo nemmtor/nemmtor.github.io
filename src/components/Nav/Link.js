@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link as ScrollLink } from 'react-scroll';
 
-const SCROLL_DURATION = 300;
-const SCROLL_DELAY = 300;
-const SCROLL_OFFSET = -100;
+export const SCROLL_DURATION = 300;
+export const SCROLL_DELAY = 300;
+export const SCROLL_OFFSET = -100;
 
 const Link = ({
   onClick,
@@ -20,7 +20,6 @@ const Link = ({
     tabIndex={isOpen ? '0' : '-1'}
     onKeyDown={onKeyDown}
     to={name}
-    smooth
     onClick={onClick}
     offset={SCROLL_OFFSET}
     delay={SCROLL_DELAY}
@@ -29,6 +28,7 @@ const Link = ({
       setCurrentSection(name);
     }}
     role="menuitem"
+    smooth
     spy
   >
     {title}

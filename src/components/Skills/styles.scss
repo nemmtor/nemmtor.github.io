@@ -1,15 +1,29 @@
+@import '../../styles/settings.scss';
+
 .skills-type {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 96px;
+  margin-bottom: 10rem;
 }
 
 .skills-type__title {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   font-weight: 400;
-  opacity: 0.7;
+  opacity: 0.8;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: $main-color;
+    filter: brightness(1.2);
+  }
 }
 
 .skills {
@@ -18,7 +32,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     width: 80%;
-    gap: 32px;
+    gap: 6rem 3rem;
   }
 
   &__item {

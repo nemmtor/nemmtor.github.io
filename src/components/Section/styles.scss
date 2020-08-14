@@ -3,12 +3,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
-  padding: 2rem 0;
+  padding: 6rem 0 2rem;
+  width: 60%;
+  margin: 0 auto;
 
   &__title {
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    margin-bottom: 64px;
+    margin-bottom: 6rem;
+    font-size: 3em;
   }
 }

@@ -5,7 +5,6 @@ import sassIcon from '../../assets/sass.svg';
 import jsIcon from '../../assets/javascript.svg';
 import reactIcon from '../../assets/react.svg';
 import gitIcon from '../../assets/git.svg';
-import bsIcon from '../../assets/bootstrap.svg';
 import materialIcon from '../../assets/material.png';
 import tsIcon from '../../assets/typescript.svg';
 import phpIcon from '../../assets/php.svg';
@@ -14,6 +13,7 @@ import babelIcon from '../../assets/babel.svg';
 import gimpIcon from '../../assets/gimp.svg';
 import herokuIcon from '../../assets/heroku.svg';
 import npmIcon from '../../assets/npm.svg';
+import styledcomponents from '../../assets/styledcomponents.png';
 import webpackIcon from '../../assets/webpack.svg';
 import trelloIcon from '../../assets/trello.svg';
 import './styles.scss';
@@ -24,7 +24,7 @@ const confident = [
   { name: 'javascript', icon: jsIcon },
   { name: 'react', icon: reactIcon },
   { name: 'git', icon: gitIcon },
-  { name: 'bootstrap', icon: bsIcon },
+  { name: 'styled components', icon: styledcomponents },
   { name: 'material ui', icon: materialIcon },
 ];
 
