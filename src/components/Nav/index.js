@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
-import logo from '../../assets/logo.svg';
-import './styles.scss';
+import { logo } from 'assets';
 import Link from './Link';
+import './styles.scss';
 
 const Nav = ({ triggerNav, sections, setCurrentSection }) => {
   const [isOpen, setIsOpen] = useState(false);

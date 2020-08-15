@@ -1,10 +1,5 @@
 export { default as AsideNav } from './AsideNav';
-export { default as About } from './About';
 export { default as Content } from './Content';
-export { default as Header } from './Header';
 export { default as Loading } from './Loading';
-export { default as Main } from './Main';
 export { default as Nav } from './Nav';
-export { default as Projects } from './Projects';
 export { default as Section } from './Section';
-export { default as Skills } from './Skills';

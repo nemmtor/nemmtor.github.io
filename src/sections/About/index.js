@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 import './styles.scss';
 import me from '../../assets/me.jpeg';
-import { SCROLL_DURATION, SCROLL_OFFSET } from '../Nav/Link';
+import { SCROLL_DURATION, SCROLL_OFFSET } from '../../components/Nav/Link';
 
 const About = () => {
   const handleCtaEnterDown = (e) => {
