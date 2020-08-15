@@ -51,7 +51,6 @@
     color: #fff;
     background: transparent;
     border: none;
-    outline: none;
     position: relative;
     height: 50px;
     width: 150px;
@@ -61,10 +60,6 @@
     text-transform: uppercase;
     cursor: pointer;
     margin-bottom: 10rem;
-
-    &:focus {
-      border: 2px solid $main-color;
-    }
 
     img {
       height: 24px;
@@ -80,16 +75,15 @@
       transform: translateX(15px);
       background: $main-color;
       z-index: -1;
-      transition: filter 0.2s ease;
+      transition: transform 0.1s linear;
+      transform-origin: right;
     }
 
-    &:hover::before {
-      filter: saturate(2);
+    &:hover::before  {
+      transform: translateX(15px) scaleX(1.2);
     }
   }
 }
-
-// TODO: Add Media Queries for header__info
 
 .header__info {
   display: flex;

@@ -1,31 +1,34 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import arrowUp from '../../assets/arrow-up.svg';
-import github from '../../assets/github.png';
-import world from '../../assets/world.svg';
+import { upArrow, world } from 'assets';
+import { github } from 'assets/tech-icons';
 
 const Project = ({ details }) => {
-  const { img, title, description, urls, stack } = details;
+  const { description, img, stack, title, urls } = details;
 
-  const [isActive, setIsActive] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggle = () => {
-    setIsActive(!isActive);
+  const toggleProjectDetails = () => {
+    setIsExpanded(!isExpanded);
   };
 
   return (
     <article className="project">
       <div className="project__image-container">
-        <img src={img.src} alt={img.alt} className="project__image" />
+        <img alt={img.alt} className="project__image" src={img.src} />
       </div>
       <div
         className={`project__details ${
-          isActive ? 'project__details--active' : ''
+          isExpanded ? 'project__details--active' : ''
         }`}
       >
-        <button type="button" className="project__toggle" onClick={toggle}>
-          <img src={arrowUp} alt="Arrow up" />
+        <button
+          className="project__toggle"
+          onClick={toggleProjectDetails}
+          type="button"
+        >
+          <img alt="Arrow up" src={upArrow} />
         </button>
 
         <h4 className="project__title">{title}</h4>
@@ -34,27 +37,27 @@ const Project = ({ details }) => {
           Tech stack:
           {stack.map(({ alt, src }) => (
             <img
-              key={alt}
-              src={src}
               alt={alt}
               className="project__stack-item"
+              key={alt}
+              src={src}
             />
           ))}
         </div>
         <a
           className="project__link"
           href={urls.repo}
-          tabIndex={isActive ? '0' : '-1'}
+          tabIndex={isExpanded ? '0' : '-1'}
         >
-          <img className="project__link-icon" src={github} alt="Github" />
+          <img alt="Github" className="project__link-icon" src={github} />
           Code
         </a>
         <a
           className="project__link"
           href={urls.live}
-          tabIndex={isActive ? '0' : '-1'}
+          tabIndex={isExpanded ? '0' : '-1'}
         >
-          <img className="project__link-icon" src={world} alt="Github" />
+          <img alt="Github" className="project__link-icon" src={world} />
           Live
         </a>
       </div>
@@ -64,22 +67,22 @@ const Project = ({ details }) => {
 
 Project.propTypes = {
   details: PropTypes.shape({
+    description: PropTypes.string.isRequired,
     img: PropTypes.shape({
-      src: PropTypes.string.isRequired,
       alt: PropTypes.string.isRequired,
-    }).isRequired,
-    urls: PropTypes.shape({
-      repo: PropTypes.string.isRequired,
-      live: PropTypes.string.isRequired,
+      src: PropTypes.string.isRequired,
     }).isRequired,
     stack: PropTypes.arrayOf(
       PropTypes.shape({
-        src: PropTypes.string.isRequired,
         alt: PropTypes.string.isRequired,
+        src: PropTypes.string.isRequired,
       }),
     ).isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    urls: PropTypes.shape({
+      live: PropTypes.string.isRequired,
+      repo: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 };
 

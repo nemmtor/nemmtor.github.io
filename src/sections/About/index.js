@@ -1,22 +1,23 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { scroller } from 'react-scroll';
 
 import './styles.scss';
-import me from '../../assets/me.jpeg';
-import { SCROLL_DURATION, SCROLL_OFFSET } from '../Nav/Link';
+import { SCROLL_DURATION, SCROLL_OFFSET } from 'scrollconfig';
+import { me } from 'assets';
 
 const About = () => {
-  const handleCtaEnterDown = (e) => {
-    if (e.keyCode === 13) {
-      e.preventDefault();
-      e.target.click();
-    }
+  const handleCtaClick = () => {
+    scroller.scrollTo('contact', {
+      duration: SCROLL_DURATION,
+      offset: SCROLL_OFFSET,
+      smooth: true,
+    });
   };
 
   return (
     <article className="about">
       <div className="about__img-container">
-        <img className="about__img" src={me} alt="Kacper Witas" />
+        <img alt="Kacper Witas" className="about__img" src={me} />
       </div>
       <p className="about__text">
         <span className="about__text-part">
@@ -39,17 +40,9 @@ const About = () => {
           so I can become a professional developer and do what I love for the
           living. I&apos;m sure I&apos;ll fit perfectly in your company, so
           please dont hestitate and{' '}
-          <Link
-            className="about__cta"
-            duration={SCROLL_DURATION}
-            offset={SCROLL_OFFSET}
-            to="contact"
-            smooth
-            tabIndex="0"
-            onKeyDown={handleCtaEnterDown}
-          >
+          <button className="about__cta" onClick={handleCtaClick} type="button">
             contact me
-          </Link>
+          </button>
         </span>
       </p>
     </article>

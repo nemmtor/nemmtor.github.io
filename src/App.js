@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
 
-import {
-  AsideNav,
-  About,
-  Content,
-  Header,
-  Main,
-  Nav,
-  Projects,
-  Section,
-  Skills,
-} from './components';
+import { AsideNav, ContentContainer, Nav, Section } from 'components';
+import { About, Header, Projects, Skills } from 'sections';
 
 const sections = [
   { name: 'home', Component: Header, title: 'Home' },
@@ -21,40 +12,44 @@ const sections = [
 ];
 
 export default function App() {
+  // use state for dealing with triggering navigation as it can be
+  // triggered by few components in a component tree
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [currentSection, setCurrentSection] = useState();
 
-  const triggerNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
+  // used here because aside nav will show current section based
+  // on nav active class
+  const [currentSection, setCurrentSection] = useState();
 
   return (
     <>
       <Nav
-        triggerNav={triggerNav}
-        sections={sections}
-        setCurrentSection={setCurrentSection}
-      />
-      <AsideNav
         isNavOpen={isNavOpen}
         sections={sections}
-        currentSection={currentSection}
+        setCurrentSection={setCurrentSection}
+        setIsNavOpen={setIsNavOpen}
       />
-      <Content isNavOpen={isNavOpen}>
+
+      <AsideNav
+        currentSection={currentSection}
+        isNavOpen={isNavOpen}
+        sections={sections}
+      />
+
+      <ContentContainer isNavOpen={isNavOpen}>
         <Header id="home" />
-        <Main>
-          {sections.map(({ name, Component, title }) => {
-            if (name === 'home') {
-              return null;
-            }
+        <main>
+          {sections.map(({ Component, name, title }) => {
+            // omit the header as it is outside of main
             return (
-              <Section id={name} title={title} key={name}>
-                <Component />
-              </Section>
+              name !== 'home' && (
+                <Section id={name} title={title} key={name}>
+                  <Component />
+                </Section>
+              )
             );
           })}
-        </Main>
-      </Content>
+        </main>
+      </ContentContainer>
     </>
   );
 }

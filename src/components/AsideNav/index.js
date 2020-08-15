@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const AsideNav = ({ isNavOpen, sections, currentSection }) => {
+const AsideNav = ({ currentSection, isNavOpen, sections }) => {
   return (
     <aside className={`aside ${isNavOpen ? 'aside--hidden' : ''}`}>
       <div className="aside__bar" />
       <ul className="aside__list">
-        {sections.map(({ title, name }, index) => (
+        {sections.map(({ name, title }, index) => (
           <li
             className={`aside__section ${
               currentSection === name ? 'aside__section--active' : ''
@@ -36,7 +36,7 @@ AsideNav.propTypes = {
 };
 
 AsideNav.defaultProps = {
-  currentSection: 'asd',
+  currentSection: null,
 };
 
 export default AsideNav;
