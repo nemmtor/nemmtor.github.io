@@ -1,3 +1,4 @@
+import { debounce } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
@@ -26,9 +27,9 @@ const Nav = ({ isNavOpen, sections, setCurrentSection, setIsNavOpen }) => {
     }
   };
 
-  const handleSetActive = (name) => {
+  const handleSetActive = debounce((name) => {
     setCurrentSection(name);
-  };
+  }, 100);
 
   return (
     <nav className="nav">
