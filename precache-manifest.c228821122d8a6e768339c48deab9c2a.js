@@ -1,43 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cb0e0362a2a7e2ae938ab3bc6b85d4d7",
+    "revision": "3697a397721f76153e523834f1657e3a",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "88afa2833bcda6fd8ea7",
-    "url": "/portfolio/static/css/main.0ee4e3b4.chunk.css"
+    "revision": "9060488279caa6a012e6",
+    "url": "/portfolio/static/css/3.e34cb998.chunk.css"
   },
   {
-    "revision": "75bf99af1c6495963db8",
-    "url": "/portfolio/static/js/2.f6e47387.chunk.js"
+    "revision": "3793133b562ec917cde8",
+    "url": "/portfolio/static/css/main.2e32b84c.chunk.css"
   },
   {
-    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/portfolio/static/js/2.f6e47387.chunk.js.LICENSE.txt"
+    "revision": "91c10ff8a0da26bea020",
+    "url": "/portfolio/static/js/2.389397fc.chunk.js"
   },
   {
-    "revision": "03c8faff67847689b568",
-    "url": "/portfolio/static/js/3.34e97ab9.chunk.js"
+    "revision": "90565ba0b43e1b95d2876295dfd7014d",
+    "url": "/portfolio/static/js/2.389397fc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "88afa2833bcda6fd8ea7",
-    "url": "/portfolio/static/js/main.74c32040.chunk.js"
+    "revision": "9060488279caa6a012e6",
+    "url": "/portfolio/static/js/3.e93194cf.chunk.js"
   },
   {
-    "revision": "15cacce552a12814d9d6",
-    "url": "/portfolio/static/js/runtime-main.461d2ed3.js"
+    "revision": "3793133b562ec917cde8",
+    "url": "/portfolio/static/js/main.6969291f.chunk.js"
   },
   {
-    "revision": "d9e88f0b27b4e76eb286a145c96f848c",
-    "url": "/portfolio/static/media/arrow-right.d9e88f0b.svg"
+    "revision": "a595220648d1e0f891de",
+    "url": "/portfolio/static/js/runtime-main.b91dba8f.js"
   },
   {
     "revision": "529bf9cdff934f9ce5f709e3c2e9073d",
     "url": "/portfolio/static/media/babel.529bf9cd.svg"
-  },
-  {
-    "revision": "c4ce29f3d8d818e21c893bde4d815089",
-    "url": "/portfolio/static/media/bootstrap.c4ce29f3.svg"
   },
   {
     "revision": "bb026ce279d70001f63b2f700d521922",
@@ -52,10 +48,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/git.6f4b432c.svg"
   },
   {
-    "revision": "3af582e56c213a6439e38c3f360bd633",
-    "url": "/portfolio/static/media/heroku.3af582e5.svg"
-  },
-  {
     "revision": "7997c4244e7a8cf2b160803e1c741502",
     "url": "/portfolio/static/media/html.7997c424.svg"
   },
@@ -66,6 +58,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0b90ee8301b77c1a3e1348cb06d9f7e6",
     "url": "/portfolio/static/media/logo.0b90ee83.svg"
+  },
+  {
+    "revision": "4e5b3564c6082055b025c54d97dbc8d1",
+    "url": "/portfolio/static/media/lovematcher.4e5b3564.png"
+  },
+  {
+    "revision": "9748f93d3567863a842208a34e7d5a71",
+    "url": "/portfolio/static/media/luxremonty.9748f93d.png"
+  },
+  {
+    "revision": "3e3488f1a1631093131ed9b2ecb1c181",
+    "url": "/portfolio/static/media/me.3e3488f1.jpeg"
   },
   {
     "revision": "e83e60b310396562d703c9ccff616b91",
@@ -84,8 +88,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/react.e9f3d01c.svg"
   },
   {
+    "revision": "d9e88f0b27b4e76eb286a145c96f848c",
+    "url": "/portfolio/static/media/rightArrow.d9e88f0b.svg"
+  },
+  {
     "revision": "88c1047792044b547d1d3e066d3e18c4",
     "url": "/portfolio/static/media/sass.88c10477.svg"
+  },
+  {
+    "revision": "65bcf5e25e709cda84e5bdaf334f7ba7",
+    "url": "/portfolio/static/media/styled.65bcf5e2.png"
   },
   {
     "revision": "3c2970caad593f3a5364e13e1f75f29b",
@@ -96,7 +108,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/typescript.0ecd0125.svg"
   },
   {
+    "revision": "a4f91e56306e3a398efb7ffbeb6cb639",
+    "url": "/portfolio/static/media/upArrow.a4f91e56.svg"
+  },
+  {
     "revision": "883863a6657dca9e5201132dc3a725b1",
     "url": "/portfolio/static/media/webpack.883863a6.svg"
+  },
+  {
+    "revision": "5f4dcd0972c5aa3dd7c57e64a665b9ad",
+    "url": "/portfolio/static/media/world.5f4dcd09.svg"
   }
 ]);
