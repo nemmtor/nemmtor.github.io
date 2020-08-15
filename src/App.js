@@ -20,16 +20,13 @@ export default function App() {
   // on nav active class
   const [currentSection, setCurrentSection] = useState();
 
-  const triggerNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
-
   return (
     <>
       <Nav
-        triggerNav={triggerNav}
+        isNavOpen={isNavOpen}
         sections={sections}
         setCurrentSection={setCurrentSection}
+        setIsNavOpen={setIsNavOpen}
       />
       <AsideNav
         currentSection={currentSection}

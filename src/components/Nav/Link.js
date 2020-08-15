@@ -2,32 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link as ScrollLink } from 'react-scroll';
 
-export const SCROLL_DURATION = 300;
-export const SCROLL_DELAY = 300;
-export const SCROLL_OFFSET = -100;
+import { SCROLL_DELAY, SCROLL_DURATION, SCROLL_OFFSET } from 'scrollconfig';
 
 const Link = ({
-  onClick,
-  onKeyDown,
-  title,
-  isOpen,
+  handleClick,
+  handleKeyDown,
+  handleSetActive,
+  isNavOpen,
   name,
-  setCurrentSection,
+  title,
 }) => (
   <ScrollLink
     activeClass="nav__list-item--active"
     className="nav__list-item"
-    tabIndex={isOpen ? '0' : '-1'}
-    onKeyDown={onKeyDown}
-    to={name}
-    onClick={onClick}
-    offset={SCROLL_OFFSET}
     delay={SCROLL_DELAY}
     duration={SCROLL_DURATION}
-    onSetActive={() => {
-      setCurrentSection(name);
-    }}
+    onClick={handleClick}
+    offset={SCROLL_OFFSET}
+    onKeyDown={handleKeyDown}
+    onSetActive={handleSetActive}
     role="menuitem"
+    tabIndex={isNavOpen ? '0' : '-1'}
+    to={name}
     smooth
     spy
   >
@@ -36,12 +32,12 @@ const Link = ({
 );
 
 Link.propTypes = {
-  title: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  onKeyDown: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  handleKeyDown: PropTypes.func.isRequired,
+  handleSetActive: PropTypes.func.isRequired,
+  isNavOpen: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
-  setCurrentSection: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Link;

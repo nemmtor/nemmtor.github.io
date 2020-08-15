@@ -1,84 +1,69 @@
 import PropTypes from 'prop-types';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import { logo } from 'assets';
 import Link from './Link';
 import './styles.scss';
 
-const Nav = ({ triggerNav, sections, setCurrentSection }) => {
+const Nav = ({ isNavOpen, sections, setCurrentSection, setIsNavOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const burger = useRef();
 
   const toggleNav = () => {
-    triggerNav();
     setIsOpen(!isOpen);
+    setIsNavOpen(!isNavOpen);
   };
 
-  const handleClick = (name) => {
-    toggleNav();
-  };
-
-  // For trapping focus inside nav
   const handleKeyDown = (e, index) => {
+    // Click on enter
     if (e.keyCode === 13) {
       e.preventDefault();
       e.target.click();
     }
 
-    // Handle tab for first item
-    if (index === 0) {
-      if (!e.shiftKey) return;
-      e.preventDefault();
-      if (e.keyCode === 9) {
-        burger.current.focus();
-      }
+    // Close nav when tabbing out or hitting escape key
+    if (index === sections.length - 1 || e.keyCode === 27) {
+      toggleNav();
     }
+  };
 
-    // Handle tab for last item
-    if (index === sections.length - 1) {
-      if (e.shiftKey) return;
-      e.preventDefault();
-      if (e.keyCode === 9) {
-        burger.current.focus();
-      }
-    }
+  const handleSetActive = (name) => {
+    setCurrentSection(name);
   };
 
   return (
     <nav className="nav">
       <div className="nav__brand">
-        <img src={logo} alt="log" className="nav__logo" />
-        <span className="nav__dev">Front-End Dev</span>
+        <img className="nav__logo" alt="Front end developer" src={logo} />
+        <span className="nav__logo-text">Front-End Dev</span>
       </div>
 
       <button
-        type="button"
-        className={`nav__burger ${isOpen ? 'nav__burger--open' : ''}`}
-        aria-label="Toggle navigation"
         aria-controls="navigation"
+        aria-expanded={isNavOpen ? 'true' : 'false'}
         aria-haspopup="true"
-        aria-expanded={isOpen ? 'true' : 'false'}
+        aria-label={isNavOpen ? 'Close navigation' : 'Open navigation'}
+        className={`nav__burger ${isNavOpen ? 'nav__burger--open' : ''}`}
         onClick={toggleNav}
-        ref={burger}
+        type="button"
       >
         <div className="nav__burger-part" />
         <div className="nav__burger-part" />
         <div className="nav__burger-part" />
       </button>
       <ul
+        className={`nav__list ${isOpen ? 'nav__list--active' : ''}`}
         id="navigation"
         role="menu"
-        className={`nav__list ${isOpen ? 'nav__list--active' : ''}`}
       >
         {sections.map(({ name, title }, index) => (
           <li key={name} role="none">
             <Link
-              title={title}
+              handleClick={toggleNav}
+              handleKeyDown={(e) => handleKeyDown(e, index)}
+              handleSetActive={handleSetActive}
+              isNavOpen={isNavOpen}
               name={name}
-              onClick={() => handleClick(name)}
-              onKeyDown={(e) => handleKeyDown(e, index)}
-              isOpen={isOpen}
-              setCurrentSection={setCurrentSection}
+              title={title}
             >
               {title}
             </Link>
@@ -90,14 +75,15 @@ const Nav = ({ triggerNav, sections, setCurrentSection }) => {
 };
 
 Nav.propTypes = {
-  triggerNav: PropTypes.func.isRequired,
-  setCurrentSection: PropTypes.func.isRequired,
+  isNavOpen: PropTypes.func.isRequired,
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       title: PropTypes.string,
     }),
   ).isRequired,
+  setCurrentSection: PropTypes.func.isRequired,
+  setIsNavOpen: PropTypes.func.isRequired,
 };
 
 export default Nav;

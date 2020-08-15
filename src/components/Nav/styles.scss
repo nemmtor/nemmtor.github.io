@@ -24,14 +24,14 @@
 
   &__logo {
     height: 3rem;
-  }
 
-  &__dev {
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: 2rem;
-    letter-spacing: 0.05em;
+    &-text {
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: 2rem;
+      letter-spacing: 0.05em;
+    }
   }
 }
 

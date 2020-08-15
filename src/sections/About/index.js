@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 import './styles.scss';
-import me from '../../assets/me.jpeg';
-import { SCROLL_DURATION, SCROLL_OFFSET } from '../../components/Nav/Link';
+import { SCROLL_DURATION, SCROLL_OFFSET } from 'scrollconfig';
+import { me } from 'assets';
 
 const About = () => {
   const handleCtaEnterDown = (e) => {
