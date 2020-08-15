@@ -6,10 +6,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8rem;
+  height: 6rem;
   background: #0c0c0c;
   padding: 2rem 5rem;
-  box-shadow: 0 0 4px 0px $main-color;
+  box-shadow:  0 0 4px 0px $main-color;
 
   position: fixed;
   top: 0;
@@ -44,14 +44,10 @@
   justify-content: space-between;
   background: transparent;
   padding: 4px;
-  outline: none;
   border: none;
   cursor: pointer;
   position: relative;
 
-  &:focus {
-    box-shadow: 0 0 0 3px $main-color;
-  }
 
   &-part {
     width: 100%;
@@ -74,7 +70,7 @@
     &:nth-child(2) {
       opacity: 0;
       transition: opacity 0.2s ease, transform 0.2s ease;
-      transform: translateX(200%);
+      transform: translateX(500%);
     }
     &:last-child {
       transform: translateY(-10px) rotate(-45deg);
@@ -129,8 +125,11 @@
       transform-origin: left;
     }
 
-    &:hover,
     &:focus {
+      outline: 1px solid #fff;
+    }
+
+    &:hover {
       &::after {
         transform: scaleX(1);
       }

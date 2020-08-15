@@ -22,7 +22,10 @@ const Nav = ({ isNavOpen, sections, setCurrentSection, setIsNavOpen }) => {
     }
 
     // Close nav when tabbing out or hitting escape key
-    if (index === sections.length - 1 || e.keyCode === 27) {
+    if (
+      (index === sections.length - 1 && !e.shiftKey && e.keyCode === 9) ||
+      e.keyCode === 27
+    ) {
       toggleNav();
     }
   };
@@ -76,7 +79,7 @@ const Nav = ({ isNavOpen, sections, setCurrentSection, setIsNavOpen }) => {
 };
 
 Nav.propTypes = {
-  isNavOpen: PropTypes.func.isRequired,
+  isNavOpen: PropTypes.bool.isRequired,
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,

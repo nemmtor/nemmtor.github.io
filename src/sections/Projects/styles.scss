@@ -56,7 +56,6 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    outline: none;
     background: #111;
     border: none;
     height: 5rem;
@@ -88,8 +87,7 @@
       transition: opacity 0.2s ease;
     }
 
-    &:hover::after,
-    &:focus::after {
+    &:hover::after {
       opacity: 1;
     }
   }

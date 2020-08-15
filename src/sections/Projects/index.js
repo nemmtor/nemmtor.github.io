@@ -4,7 +4,6 @@ import { html, sass, javascript, php, react, styled } from 'assets/tech-icons';
 import { lovematcher, luxremonty } from 'assets/projects-images';
 
 import Project from './Project';
-
 import './styles.scss';
 
 const myProjects = [

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { AsideNav, Content, Nav, Section } from 'components';
+import { AsideNav, ContentContainer, Nav, Section } from 'components';
 import { About, Header, Projects, Skills } from 'sections';
 
 const sections = [
@@ -28,12 +28,14 @@ export default function App() {
         setCurrentSection={setCurrentSection}
         setIsNavOpen={setIsNavOpen}
       />
+
       <AsideNav
         currentSection={currentSection}
         isNavOpen={isNavOpen}
         sections={sections}
       />
-      <Content isNavOpen={isNavOpen}>
+
+      <ContentContainer isNavOpen={isNavOpen}>
         <Header id="home" />
         <main>
           {sections.map(({ Component, name, title }) => {
@@ -47,7 +49,7 @@ export default function App() {
             );
           })}
         </main>
-      </Content>
+      </ContentContainer>
     </>
   );
 }

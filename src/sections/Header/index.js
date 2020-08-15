@@ -4,27 +4,30 @@ import { scroller } from 'react-scroll';
 
 import './styles.scss';
 import { rightArrow } from 'assets';
+import { SCROLL_DURATION, SCROLL_OFFSET } from 'scrollconfig';
 
 const Header = ({ id }) => {
   const handleCtaClick = () => {
     scroller.scrollTo('contact', {
-      duration: 1500,
+      // duration * 5 because there are 5 sections ahead and
+      // SCROLL_DURATION is duration for scrolling through 1 section
+      duration: SCROLL_DURATION * 5,
+      offset: SCROLL_OFFSET,
       smooth: true,
-      offset: -60,
     });
   };
 
   return (
-    <header id={id} className="header">
+    <header className="header" id={id}>
       <div className="hero-wrapper">
         <section className="hero">
           <h1 className="hero__title">
             Your next front-end developer
             <span>Kacper Witas</span>
           </h1>
-          <button type="button" className="hero__cta" onClick={handleCtaClick}>
+          <button className="hero__cta" onClick={handleCtaClick} type="button">
             <span>Hire me</span>
-            <img src={rightArrow} alt="Arrow right" />
+            <img alt="Arrow right" src={rightArrow} />
           </button>
         </section>
       </div>

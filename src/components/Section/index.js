@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const Section = ({ children, title, id }) => {
+const Section = ({ children, id, title }) => {
   return (
-    <section id={id} className="section">
+    <section className="section" id={id}>
       {title && <h2 className="section__title">{title}</h2>}
       {children}
     </section>
