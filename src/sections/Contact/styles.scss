@@ -1,14 +1,21 @@
 @import '../../styles/settings.scss';
 
-.contact__container {
+.form__container {
     border-radius: 1rem;
-    background: #111;
     display: grid;
     padding: 4rem;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
 }
-.contact__text {
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form__text {
     opacity: 0.75;
     line-height: 1.5;
 
@@ -17,42 +24,34 @@
 
     &-part {
         display: block;
+        margin-bottom: 2rem;
 
-        &:first-of-type {
-            margin-bottom: 1rem;
-            position: relative;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
     strong {
         display: block;
-        color: $main-color;
+        color: $secondary-color;
         margin-bottom: 1rem;
     }
 
-    sup {
-        color: $main-color;
-    }
 }
 
-.contact__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.contact__label {
+.form__label {
     width: 100%;
     opacity: 0.9;
 }
 
-.contact__input {
+.form__input {
     background: transparent;
     border: none;
-    border: 1px solid $main-color;
+    border: 1px solid $accent-color;
     border-radius: 5px;
     margin-bottom: 2rem;
-    color: #fff;
+    color: $light-text-color;
     padding: 1rem;
     width: 100%;
     display: block;
@@ -62,11 +61,11 @@
     }
 }
 
-.contact__submit {
+.form__submit {
     text-transform: uppercase;
     padding: 1rem 3rem;
-    background: $main-color;
-    color: #fff;
+    background: $accent-color;
+    color: $light-text-color;
     align-self: flex-start;
     border: none;
     letter-spacing: 0.2em;

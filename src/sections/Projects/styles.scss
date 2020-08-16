@@ -1,8 +1,8 @@
 @import '../../styles/settings.scss';
 
 .project {
-  max-width: 60rem;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -17,7 +17,7 @@
   &__image-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    box-shadow: 0 0 2px 2px white;
 
     &::after {
       content: '';
@@ -26,8 +26,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: $main-color;
-      opacity: 0.2;
+      background: $accent-color;
+      opacity: 0.15;
     }
   }
 
@@ -43,7 +43,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    color: #eee;
+    color: $light-text-color;
     transform: translateY(85%);
     transition: transform 0.3s ease-out;
 
@@ -86,7 +86,7 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      box-shadow: 0 0 5px 3px $main-color;
+      box-shadow: 0 0 5px 3px $accent-color;
       opacity: 0;
       transition: opacity 0.2s ease;
     }
@@ -122,9 +122,9 @@
 
   &__link {
     padding: 0.8rem 1.6rem;
-    border: 1px solid $main-color;
+    border: 1px solid $accent-color;
     text-decoration: none;
-    color: #fff;
+    color: $light-text-color;
     margin-right: 2rem;
     border-radius: 5px;
     text-transform: uppercase;
@@ -147,7 +147,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: $main-color;
+      background: $accent-color;
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.2s ease;

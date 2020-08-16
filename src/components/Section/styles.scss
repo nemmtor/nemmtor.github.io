@@ -12,6 +12,18 @@
     letter-spacing: 0.1em;
     margin-bottom: 6rem;
     font-size: 2.5em;
-    filter: drop-shadow(0 0 2px $main-color);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 100%;
+      background: $secondary-color;
+      z-index: -1;
+      transform: rotate(-10deg) translateX(-25px);
+    }
   }
 }

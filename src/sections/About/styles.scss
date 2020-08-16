@@ -24,7 +24,7 @@
       display: block;
       margin-bottom: 2rem;
       strong {
-        color: $main-color;
+        color: $secondary-color;
       }
 
       &:first-child {
@@ -38,10 +38,10 @@
 
   &__cta {
     cursor: pointer;
-    color: #fff;
+    color: $light-text-color;
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: $main-color;
+    background: $accent-color;
     border: none;
   }
 }
