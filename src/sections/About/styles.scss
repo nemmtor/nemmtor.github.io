@@ -25,6 +25,10 @@
       strong {
         color: $main-color;
       }
+
+      &:first-child {
+        margin-top: 6rem;
+      }
     }
   }
 

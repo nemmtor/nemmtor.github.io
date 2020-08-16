@@ -57,7 +57,7 @@ const Skills = () => {
   return (
     <>
       {mySkills.map(({ skills, title }) => (
-        <article className="skills-type">
+        <article className="skills-type" key={title}>
           <h3 className="skills-type__title">{title}</h3>
           <ul className="skills__list">
             {skills.map(({ name, icon }) => (

@@ -1,0 +1,70 @@
+@import '../../styles/settings.scss';
+
+.contact__container {
+    border-radius: 1rem;
+    background: #111;
+    display: grid;
+    padding: 4rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+.contact__text {
+    opacity: 0.75;
+    text-align: left;
+    line-height: 1.5;
+    
+
+    &-part {
+        display: block;
+
+        &:first-of-type {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+    }
+
+    strong {
+        display: block;
+        color: $main-color;
+        margin-bottom: 1rem;
+    }
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__label {
+    width: 100%;
+    text-align: left;
+    opacity: 0.9;
+}
+
+.contact__input {
+    background: transparent;
+    border: none;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+    display: block;
+
+    &--msg {
+        min-height: 15rem;
+    }
+}
+
+.contact__submit {
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    background: $main-color;
+    color: #fff;
+    align-self: flex-start;
+    border: none;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+}
