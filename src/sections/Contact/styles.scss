@@ -10,8 +10,9 @@
 }
 .contact__text {
     opacity: 0.75;
-    text-align: left;
     line-height: 1.5;
+
+    
     
 
     &-part {
@@ -28,6 +29,10 @@
         color: $main-color;
         margin-bottom: 1rem;
     }
+
+    sup {
+        color: $main-color;
+    }
 }
 
 .contact__form {
@@ -38,7 +43,6 @@
 
 .contact__label {
     width: 100%;
-    text-align: left;
     opacity: 0.9;
 }
 

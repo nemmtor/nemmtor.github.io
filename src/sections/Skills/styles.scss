@@ -6,6 +6,10 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 10rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .skills-type__title {
@@ -30,25 +34,27 @@
   &__list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    width: 80%;
-    gap: 6rem 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    width: 100%;
+    gap: 2rem;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+
   }
 
   &__icon {
     height: 80px;
-    margin-bottom: 16px;
+    margin-bottom: 0.5rem;
   }
 
   &__name {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.1em;
+    font-size: 0.8em;
   }
 }

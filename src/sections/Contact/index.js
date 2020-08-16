@@ -31,9 +31,9 @@ const Contact = () => {
       <p className="contact__text">
         <strong>Did you know?</strong>
         <span className="contact__text-part">
-          90% of web users never use contact form even if they are intesrested
-          in getting in touch. Let&apos;s change that - send me your job offer
-          details via this form!
+          90% of the web users never use contact form even if they are
+          intesrested in getting in touch. Let&apos;s change that - send me your
+          job offer details via this form!
         </span>
         <span className="contact__text-part">
           Feel free to leave me a message if you&apos;re interested in hiring

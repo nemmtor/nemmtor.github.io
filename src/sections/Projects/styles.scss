@@ -9,6 +9,11 @@
   margin-bottom: 4rem;
   overflow: hidden;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+
   &__image-container {
     position: relative;
     width: 100%;
@@ -41,7 +46,6 @@
     color: #eee;
     transform: translateY(85%);
     transition: transform 0.3s ease-out;
-    text-align: left;
 
     &--active {
       transform: translateY(0);
