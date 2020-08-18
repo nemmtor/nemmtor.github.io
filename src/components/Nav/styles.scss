@@ -1,21 +1,22 @@
 @import '../../styles/settings.scss';
 
-// TODO: Add Media Queries
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 6rem;
-  background: #0c0c0c;
+  background: $main-color;
   padding: 2rem 5rem;
-  box-shadow:  0 0 4px 0px $main-color;
 
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
+
+  box-shadow: 0 0 1px $light-text-color;
+
 
   &__brand {
     display: flex;
@@ -52,7 +53,7 @@
   &-part {
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: $light-text-color;
     transition: opacity 0.2s 0.2s ease, transform 0.2s 0.2s ease;
 
     &:nth-child(2) {
@@ -80,7 +81,6 @@
 
 .nav__list {
   font-size: 1.6rem;
-  // border-left: 1px solid $main-color;
   position: absolute;
   padding: 20px 50px;
   right: 0;
@@ -100,15 +100,13 @@
 
   &-item {
     font-size: 3em;
-    text-transform: uppercase;
     letter-spacing: 0.12em;
     cursor: pointer;
     display: block;
     padding: 0.5em;
     position: relative;
     background: transparent;
-    color: #fff;
-    outline: none;
+    color: $light-text-color;
     border: none;
 
     &::after {
@@ -119,15 +117,13 @@
       width: 2em;
       height: 100%;
       z-index: -1;
-      background: $main-color;
+      background: $secondary-color;
       transition: transform 0.1s linear;
       transform: scaleX(0);
       transform-origin: left;
+      opacity: 0.9;
     }
 
-    &:focus {
-      outline: 1px solid #fff;
-    }
 
     &:hover {
       &::after {
@@ -138,9 +134,9 @@
 }
 
 .nav__list-item--active {
-  color: $main-color;
+  color: $secondary-color;
   &::after {
-    background: #fff;
+    background: $light-text-color;
   }
 }
 

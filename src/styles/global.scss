@@ -14,9 +14,9 @@ html {
 body {
   font-family: $main-font;
   font-size: 1.6rem;
-  background: #0c0c0c;
-  color: #fff;
-  padding: 8rem 5rem 1rem 5rem;
+  background: $main-color;
+  color: $light-text-color;
+  padding-top: 6rem;
 }
 
 @media (max-width: 450px) {

@@ -15,8 +15,8 @@
     width: 10em;
     height: 10em;
     border: 1em solid transparent;
-    border-color: #eee;
-    border-top-color: $main-color;
+    border-color: $light-text-color;
+    border-top-color: $accent-color;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin-top: 4rem;

@@ -1,7 +1,8 @@
 @import '../../styles/settings.scss';
 
 .about {
-  max-width: 90%;
+  max-width: 70%;
+  margin-top: -6rem;
   &__img-container {
     width: 250px;
     height: 250px;
@@ -23,17 +24,24 @@
       display: block;
       margin-bottom: 2rem;
       strong {
-        color: $main-color;
+        color: $secondary-color;
+      }
+
+      &:first-child {
+        margin-top: 6rem;
+      }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
 
   &__cta {
     cursor: pointer;
-    color: #fff;
+    color: $light-text-color;
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: $main-color;
+    background: $accent-color;
     border: none;
   }
 }

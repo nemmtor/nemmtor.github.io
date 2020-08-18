@@ -1,3 +1,5 @@
+@import '../../styles/settings.scss';
+
 .aside {
   position: fixed;
   top: 100px;
@@ -16,7 +18,7 @@
   &__bar {
     width: 2px;
     height: 100%;
-    background: #fff;
+    background: $light-text-color;
     opacity: 0.3;
     position: absolute;
     top: 10px;

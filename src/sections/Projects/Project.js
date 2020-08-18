@@ -31,7 +31,7 @@ const Project = ({ details }) => {
           <img alt="Arrow up" src={upArrow} />
         </button>
 
-        <h4 className="project__title">{title}</h4>
+        <h3 className="project__title">{title}</h3>
         <p className="project__description">{description}</p>
         <div className="project__stack">
           Tech stack:
