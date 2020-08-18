@@ -1,4 +1,6 @@
-import React from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef } from 'react';
 
 import {
   babel,
@@ -19,6 +21,8 @@ import {
 } from 'assets/tech-icons';
 
 import './styles.scss';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const mySkills = [
   {
@@ -54,10 +58,37 @@ const mySkills = [
 ];
 
 const Skills = () => {
+  const skillsRef = useRef([]);
+
+  useEffect(() => {
+    skillsRef.current.forEach((skills) => {
+      gsap.fromTo(
+        skills,
+        { opacity: 0, y: 50 },
+        {
+          duration: 0.5,
+          y: 0,
+          opacity: 1,
+          ease: 'power4.out',
+          scrollTrigger: {
+            markers: true,
+            trigger: skills,
+            start: '-=75vh center',
+          },
+        },
+      );
+    });
+  }, []);
   return (
     <>
       {mySkills.map(({ skills, title }) => (
-        <article className="skills-type" key={title}>
+        <article
+          className="skills-type"
+          key={title}
+          ref={(skill) => {
+            skillsRef.current.push(skill);
+          }}
+        >
           <h3 className="skills-type__title">{title}</h3>
           <ul className="skills__list">
             {skills.map(({ name, icon }) => (
