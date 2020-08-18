@@ -1,0 +1,17 @@
+@import '../../styles/settings.scss';
+
+
+.footer {
+    padding: 4rem 0;
+    background: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__link {
+        color: $accent-color;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 0.08em;
+    }
+}
