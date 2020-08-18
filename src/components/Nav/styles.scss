@@ -87,14 +87,14 @@
   top: 100%;
   max-width: 100%;
   list-style: none;
-  opacity: 1;
-  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.2s 0.1s ease-in-out;
   transform: scaleY(0);
   transform-origin: top;
 
   &--active {
     opacity: 1;
-    transition: opacity 0.3s 0.1s ease-in-out, transform 0.3s 0.1s ease-in-out;
+    transition: opacity 0.3s 0.2s ease-in-out, transform 0.3s 0.1s ease-in-out;
     transform: scaleY(1);
   }
 
