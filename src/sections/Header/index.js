@@ -1,4 +1,5 @@
-import React from 'react';
+import gsap from 'gsap';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { scroller } from 'react-scroll';
 
@@ -17,15 +18,48 @@ const Header = ({ id }) => {
     });
   };
 
+  const titleRef = useRef(null);
+  const ctaRef = useRef(null);
+
+  useEffect(() => {
+    gsap
+      .timeline({ defaults: { duration: 0.5 } })
+      .fromTo(
+        titleRef.current,
+        { opacity: 0, x: 100 },
+        {
+          opacity: 1,
+          x: 0,
+          delay: 0.5,
+          ease: 'power4.out',
+        },
+      )
+      .fromTo(
+        ctaRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          ease: 'back.out(3)',
+        },
+        '-=0.25',
+      );
+  }, []);
+
   return (
     <header className="header" id={id}>
       <div className="hero-wrapper">
         <section className="hero">
-          <h1 className="hero__title">
+          <h1 className="hero__title" ref={titleRef}>
             Your next front-end developer
             <span className="hero__title-developer">Kacper Witas</span>
           </h1>
-          <button className="hero__cta" onClick={handleCtaClick} type="button">
+          <button
+            className="hero__cta"
+            onClick={handleCtaClick}
+            ref={ctaRef}
+            type="button"
+          >
             <span>Hire me</span>
             <img
               alt="Arrow right"

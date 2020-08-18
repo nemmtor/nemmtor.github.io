@@ -6,28 +6,16 @@
   flex-direction: column;
   align-items: center;
   max-width: 100rem;
-  opacity: 0;
-  animation: fadeIn 0.3s 0.1s forwards ease;
+  opacity: 1;
 }
 
 .hero-wrapper {
-  
   width: 100%;
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-image: url('../../assets/cosmonaut.png');
-    background-repeat: no-repeat;
-    background-position: bottom 0 right 10rem;
-    background-size: 26em;
-    animation: fadeIn 0.3s 0.3s forwards ease;
-  }
+  background-image: url('../../assets/cosmonaut.png');
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 10rem;
+  background-size: 26em;
 }
 
 .hero {
@@ -63,8 +51,6 @@
     text-transform: uppercase;
     cursor: pointer;
     margin-bottom: 10rem;
-    opacity: 0;
-    animation: fadeInSlideLeft 0.3s 0.5s forwards ease;
 
     &-arrow {
       height: 24px;
