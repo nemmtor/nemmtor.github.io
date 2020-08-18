@@ -65,6 +65,7 @@ const Nav = ({ isNavOpen, sections, setCurrentSection, setIsNavOpen }) => {
               handleClick={toggleNav}
               handleKeyDown={(e) => handleKeyDown(e, index)}
               handleSetActive={handleSetActive}
+              index={index}
               isNavOpen={isNavOpen}
               name={name}
               title={title}

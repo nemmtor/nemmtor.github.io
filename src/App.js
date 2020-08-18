@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { AsideNav, ContentContainer, Nav, Section } from 'components';
-import { About, Contact, Header, Projects, Skills } from 'sections';
+import { About, Contact, Footer, Header, Projects, Skills } from 'sections';
 
 const sections = [
   { name: 'home', Component: Header, title: 'Home' },
@@ -50,6 +50,7 @@ export default function App() {
           })}
         </main>
       </ContentContainer>
+      <Footer />
     </>
   );
 }

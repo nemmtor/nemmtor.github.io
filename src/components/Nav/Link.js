@@ -8,6 +8,7 @@ const Link = ({
   handleClick,
   handleKeyDown,
   handleSetActive,
+  index,
   isNavOpen,
   name,
   title,
@@ -16,7 +17,7 @@ const Link = ({
     activeClass="nav__list-item--active"
     className="nav__list-item"
     delay={SCROLL_DELAY}
-    duration={SCROLL_DURATION}
+    duration={SCROLL_DURATION + 150 * index}
     onClick={handleClick}
     offset={SCROLL_OFFSET}
     onKeyDown={handleKeyDown}
@@ -35,6 +36,7 @@ Link.propTypes = {
   handleClick: PropTypes.func.isRequired,
   handleKeyDown: PropTypes.func.isRequired,
   handleSetActive: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
   isNavOpen: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
