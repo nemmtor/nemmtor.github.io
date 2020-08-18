@@ -1,5 +1,6 @@
 @import './normalize.scss';
 @import './settings.scss';
+@import './animations.scss';
 
 * {
   margin: 0;
@@ -16,12 +17,5 @@ body {
   font-size: 1.6rem;
   background: $main-color;
   color: $light-text-color;
-  padding-top: 6rem;
-  padding: 6rem 2rem 0;
-}
-
-@media (max-width: 450px) {
-  body {
-    padding: 8rem 1rem 1rem 1rem;
-  }
+  padding-top: 8rem;
 }

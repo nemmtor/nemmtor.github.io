@@ -1,67 +1,72 @@
 @import '../../styles/settings.scss';
 
-// TODO: Refactor units, start from here
-
 .header {
-  color: $light-text-color;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 80%;
+  max-width: 100rem;
+  opacity: 0;
+  animation: fadeIn 0.3s 0.1s forwards ease;
 }
 
 .hero-wrapper {
-  font-size: 1.6rem;
-  background-image: url('../../assets/cosmonaut.png');
-  background-repeat: no-repeat;
-  background-position: bottom 0 right 0;
-  background-size: 31em;
+  
   width: 100%;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: url('../../assets/cosmonaut.png');
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 10rem;
+    background-size: 26em;
+    animation: fadeIn 0.3s 0.3s forwards ease;
+  }
 }
 
 .hero {
-  min-height: 45rem;
-  color: $light-text-color;
-  display: flex;
-  width: 85%;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  margin: 0 auto;
+  padding: 2rem 0 0 15rem;
 
   &__title {
-    font-size: 4em;
+    font-size: 3.6em;
     letter-spacing: 0.05em;
     line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 6rem;
-    max-width: 6em;
+    margin-bottom: 3rem;
+    max-width: 50%;
 
-    span {
+    &-developer {
       display: block;
-      font-size: 0.4em;
+      font-size: 0.3em;
       font-weight: 400;
       text-transform: none;
-      opacity: 0.9;
+      letter-spacing: 0;
     }
   }
 
   &__cta {
+    position: relative;
     color: $light-text-color;
     background: transparent;
     border: none;
-    position: relative;
-    height: 50px;
-    width: 150px;
-    font-size: 2rem;
+    height: 5rem;
+    width: 15rem;
+    font-size: 1.5em;
     display: flex;
     align-items: center;
     text-transform: uppercase;
     cursor: pointer;
     margin-bottom: 10rem;
+    opacity: 0;
+    animation: fadeInSlideLeft 0.3s 0.5s forwards ease;
 
-    img {
+    &-arrow {
       height: 24px;
     }
 
@@ -88,14 +93,13 @@
 .header__info {
   display: flex;
   flex-wrap: wrap;
-  // text-align: center;
 
   &-item {
     padding: 2rem;
     flex: 1 1 250px;
-    opacity: 0.7;
+    opacity: 0.8;
     position: relative;
-    border-top: 4px solid #333;
+    border-top: 4px solid rgba(50,50,50, 0.5);
 
     &::after {
       content: '';
@@ -120,55 +124,10 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 1rem;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   &-text {
-    line-height: 1.4;
-  }
-}
-
-@media (max-width: 1024px) {
-  .hero-wrapper {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 980px) {
-  .hero-wrapper {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .hero-wrapper {
-    font-size: 1.3rem;
-  }
-  .header {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 850px) {
-  .hero-wrapper {
-    background-size: 25em;
-  }
-}
-
-@media (max-width: 800px) {
-  .hero {
-    min-height: auto;
-  }
-  .hero-wrapper {
-    background-size: 20em;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-wrapper {
-    background-size: 15em;
-  }
-  .hero__title {
-    font-size: 3em;
+    line-height: 1.5;
   }
 }

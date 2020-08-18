@@ -23,11 +23,15 @@ const Header = ({ id }) => {
         <section className="hero">
           <h1 className="hero__title">
             Your next front-end developer
-            <span>Kacper Witas</span>
+            <span className="hero__title-developer">Kacper Witas</span>
           </h1>
           <button className="hero__cta" onClick={handleCtaClick} type="button">
             <span>Hire me</span>
-            <img alt="Arrow right" src={rightArrow} />
+            <img
+              alt="Arrow right"
+              className="hero__cta-arrow"
+              src={rightArrow}
+            />
           </button>
         </section>
       </div>
