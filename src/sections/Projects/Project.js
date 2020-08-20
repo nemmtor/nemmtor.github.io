@@ -1,4 +1,5 @@
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -17,16 +18,34 @@ const Project = ({ details }) => {
   const projectToggleRef = useRef(null);
 
   useEffect(() => {
-    gsap.from(projectToggleRef.current, {
-      y: -150,
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power4.out',
-      scrollTrigger: {
-        start: 'bottom center',
-        markers: true,
-        trigger: projectToggleRef.current,
-      },
+    const timeline = gsap
+      .timeline({
+        defaults: { duration: 0.5, ease: 'power4.out' },
+      })
+      .fromTo(
+        projectToggleRef.current,
+        {
+          opacity: 0,
+          y: -50,
+          scale: 2,
+          duration: 1,
+          transformOrigin: 'center',
+          background: '#a34bed',
+        },
+        {
+          opacity: 1,
+          y: -50,
+          scale: 2,
+        },
+      )
+      .to(projectToggleRef.current, { y: 0, scale: 1 }, '-=0.25')
+      .to(projectToggleRef.current, { background: '#0e0e0e' }, '-=0.25');
+
+    ScrollTrigger.create({
+      trigger: projectToggleRef.current,
+      markers: true,
+      animation: timeline,
+      start: '-=75vh center',
     });
   }, []);
 

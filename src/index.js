@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/all';
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 
