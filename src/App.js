@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import { AsideNav, ContentContainer, Nav, Section } from 'components';
 import { About, Contact, Footer, Header, Projects, Skills } from 'sections';
-import 'assets/cosmonaut.png';
 
 const sections = [
   { name: 'home', Component: Header, title: 'Home' },

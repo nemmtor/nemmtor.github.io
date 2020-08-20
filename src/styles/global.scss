@@ -15,9 +15,6 @@ body {
   font-family: $main-font;
   font-size: 1.6rem;
   color: $light-text-color;
-  background: #000;
+  background: $main-color;
   padding-top: 8rem;
-  background-image: url('../assets/stars.png');
-  background-size: 200vh;
-  background-attachment: fixed;
 }
