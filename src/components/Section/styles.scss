@@ -13,8 +13,8 @@
     margin-bottom: 8rem;
     font-size: 2.5em;
     position: relative;
-
-    &::after {
+    z-index: 1;
+    &::before {
       content: '';
       position: absolute;
       top: 0;

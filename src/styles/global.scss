@@ -16,6 +16,31 @@ body {
   font-family: $main-font;
   font-size: 1.6rem;
   color: $light-text-color;
-  background: $main-color;
+  background: #000;
   padding-top: 8rem;
+  background-image: url('http://www.script-tutorials.com/demos/360/images/stars.png');
+  background-size: 200vh;
+  background-attachment: fixed;
+  &::before {
+    content: '';
+    position: fixed;
+    z-index: -10000;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: transparent
+      url('http://www.script-tutorials.com/demos/360/images/twinkling.png')
+      repeat top center;
+    animation: twinkle 200s linear infinite;
+  }
+}
+
+@keyframes twinkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
 }
