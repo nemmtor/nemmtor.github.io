@@ -44,7 +44,7 @@ const Project = ({ details }) => {
     ScrollTrigger.create({
       trigger: projectToggleRef.current,
       animation: timeline,
-      start: '-=75vh center',
+      start: '-=250% center',
     });
   }, []);
 

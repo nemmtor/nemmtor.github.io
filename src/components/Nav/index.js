@@ -1,6 +1,7 @@
 import { debounce } from 'lodash';
+import gsap from 'gsap';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { logo } from 'assets';
 import Link from './Link';
@@ -8,6 +9,19 @@ import './styles.scss';
 
 const Nav = ({ isNavOpen, sections, setCurrentSection, setIsNavOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      gsap.from('.nav__list-item', {
+        x: -150,
+        ease: 'power4.out',
+        duration: 0.2,
+        delay: 0.2,
+        opacity: 0,
+        stagger: 0.1,
+      });
+    }
+  }, [isOpen]);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);

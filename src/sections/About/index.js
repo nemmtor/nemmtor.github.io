@@ -24,7 +24,7 @@ const About = () => {
       stagger: 0.2,
       scrollTrigger: {
         trigger: '.about__text',
-        start: '-=75vh center',
+        start: 'top center',
       },
     });
   }, []);

@@ -1,11 +1,13 @@
 @import '../../styles/settings.scss';
 
 .form__container {
+  margin-top: 4rem;
   border-radius: 1rem;
   display: grid;
   padding: 0 4rem;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  margin-bottom: 10rem;
 }
 
 .form {
