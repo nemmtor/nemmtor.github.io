@@ -43,7 +43,6 @@ const Project = ({ details }) => {
 
     ScrollTrigger.create({
       trigger: projectToggleRef.current,
-      markers: true,
       animation: timeline,
       start: '-=75vh center',
     });
@@ -51,7 +50,11 @@ const Project = ({ details }) => {
 
   return (
     <article className="project">
-      <div className="project__image-container">
+      <div
+        className={`project__image-container ${
+          isExpanded ? 'project__image-container--blurred' : ''
+        }`}
+      >
         <img alt={img.alt} className="project__image" src={img.src} />
       </div>
       <div

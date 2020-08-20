@@ -16,8 +16,13 @@
   &__image-container {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 420px;
     box-shadow: 0 0 2px 2px white;
+    transition: filter 0.5s ease;
+
+    &--blurred {
+      filter: blur(3px);
+    }
 
     &::after {
       content: '';

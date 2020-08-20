@@ -1,4 +1,5 @@
-import React from 'react';
+import gsap from 'gsap';
+import React, { useEffect } from 'react';
 import { scroller } from 'react-scroll';
 
 import './styles.scss';
@@ -13,6 +14,20 @@ const About = () => {
       smooth: true,
     });
   };
+
+  useEffect(() => {
+    gsap.from('.about__text-part > strong', {
+      y: 20,
+      opacity: 0,
+      duration: 1,
+      ease: 'power4.out',
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.about__text',
+        start: '-=75vh center',
+      },
+    });
+  }, []);
 
   return (
     <article className="about">

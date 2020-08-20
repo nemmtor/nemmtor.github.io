@@ -24,6 +24,8 @@
       display: block;
       margin-bottom: 2rem;
       strong {
+        // inline-block to animate transform
+        display: inline-block;
         color: $secondary-color;
       }
 
