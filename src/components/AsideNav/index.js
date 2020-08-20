@@ -7,13 +7,12 @@ import './styles.scss';
 const AsideNav = ({ currentSection, isNavOpen, sections }) => {
   const asideRef = useRef(null);
   useEffect(() => {
-    gsap
-      .timeline()
-      .fromTo(
-        asideRef.current,
-        { x: -120 },
-        { x: 0, delay: 0.5, duration: 0.5, ease: 'power4.out' },
-      );
+    gsap.timeline().from(asideRef.current, {
+      x: -120,
+      delay: 0.5,
+      duration: 0.5,
+      ease: 'power4.out',
+    });
   }, []);
 
   return (

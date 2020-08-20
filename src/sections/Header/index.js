@@ -24,16 +24,12 @@ const Header = ({ id }) => {
   useEffect(() => {
     gsap
       .timeline({ defaults: { duration: 0.5 } })
-      .fromTo(
-        titleRef.current,
-        { opacity: 0, x: 100 },
-        {
-          opacity: 1,
-          x: 0,
-          delay: 0.5,
-          ease: 'power4.out',
-        },
-      )
+      .from(titleRef.current, {
+        opacity: 0,
+        x: 100,
+        delay: 0.5,
+        ease: 'power4.out',
+      })
       .fromTo(
         ctaRef.current,
         { opacity: 0, y: 50 },

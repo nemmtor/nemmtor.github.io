@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import gsap from 'gsap';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { upArrow, world } from 'assets';
@@ -13,6 +14,22 @@ const Project = ({ details }) => {
     setIsExpanded(!isExpanded);
   };
 
+  const projectToggleRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(projectToggleRef.current, {
+      y: -150,
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power4.out',
+      scrollTrigger: {
+        start: 'bottom center',
+        markers: true,
+        trigger: projectToggleRef.current,
+      },
+    });
+  }, []);
+
   return (
     <article className="project">
       <div className="project__image-container">
@@ -26,6 +43,7 @@ const Project = ({ details }) => {
         <button
           className="project__toggle"
           onClick={toggleProjectDetails}
+          ref={projectToggleRef}
           type="button"
         >
           <img alt="Arrow up" src={upArrow} />

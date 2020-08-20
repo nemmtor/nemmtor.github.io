@@ -1,87 +1,32 @@
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect, useRef } from 'react';
 
-import {
-  babel,
-  gimp,
-  git,
-  html,
-  javascript,
-  material,
-  npm,
-  php,
-  presta,
-  react,
-  sass,
-  styled,
-  trello,
-  typescript,
-  webpack,
-} from 'assets/tech-icons';
-
+import skillsData from './skillsData';
 import './styles.scss';
 
-gsap.registerPlugin(ScrollTrigger);
-
-const mySkills = [
-  {
-    title: 'I feel confident with',
-    skills: [
-      { name: 'html5', icon: html },
-      { name: 'css3/scss', icon: sass },
-      { name: 'javascript', icon: javascript },
-      { name: 'react', icon: react },
-      { name: 'git', icon: git },
-      { name: 'styled components', icon: styled },
-      { name: 'material ui', icon: material },
-    ],
-  },
-  {
-    title: 'I am currently learning',
-    skills: [
-      { name: 'typescript', icon: typescript },
-      { name: 'php', icon: php },
-      { name: 'prestashop', icon: presta },
-    ],
-  },
-  {
-    title: 'Tools that I use',
-    skills: [
-      { name: 'babel', icon: babel },
-      { name: 'gimp', icon: gimp },
-      { name: 'npm & yarn', icon: npm },
-      { name: 'webpack', icon: webpack },
-      { name: 'trello', icon: trello },
-    ],
-  },
-];
-
 const Skills = () => {
+  // Ref for each skill article so I can animate each on scroll
   const skillsRef = useRef([]);
 
   useEffect(() => {
+    // Animate each skill article on scroll
     skillsRef.current.forEach((skills) => {
-      gsap.fromTo(
-        skills,
-        { opacity: 0, y: 50 },
-        {
-          duration: 0.5,
-          y: 0,
-          opacity: 1,
-          ease: 'power4.out',
-          scrollTrigger: {
-            markers: true,
-            trigger: skills,
-            start: '-=75vh center',
-          },
+      gsap.from(skills, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power4.out',
+        scrollTrigger: {
+          trigger: skills,
+          start: '-=75vh center',
         },
-      );
+      });
     });
   }, []);
+
   return (
     <>
-      {mySkills.map(({ skills, title }) => (
+      {skillsData.map(({ skills, title }) => (
         <article
           className="skills-type"
           key={title}
