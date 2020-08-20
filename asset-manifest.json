@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.ee5eb823.chunk.css",
+    "main.css": "/static/css/main.f32135b0.chunk.css",
     "main.js": "/static/js/main.5ca6c57d.chunk.js",
     "main.js.map": "/static/js/main.5ca6c57d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.146c5db1.js",
-    "runtime-main.js.map": "/static/js/runtime-main.146c5db1.js.map",
-    "static/css/2.5eb64777.chunk.css": "/static/css/2.5eb64777.chunk.css",
-    "static/js/2.187c3716.chunk.js": "/static/js/2.187c3716.chunk.js",
-    "static/js/2.187c3716.chunk.js.map": "/static/js/2.187c3716.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a509c35d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a509c35d.js.map",
+    "static/css/2.9dd6fc35.chunk.css": "/static/css/2.9dd6fc35.chunk.css",
+    "static/js/2.14ede99a.chunk.js": "/static/js/2.14ede99a.chunk.js",
+    "static/js/2.14ede99a.chunk.js.map": "/static/js/2.14ede99a.chunk.js.map",
     "static/js/3.33822356.chunk.js": "/static/js/3.33822356.chunk.js",
     "static/js/3.33822356.chunk.js.map": "/static/js/3.33822356.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.9c3084af7e459cb581f04de905f01e9b.js": "/precache-manifest.9c3084af7e459cb581f04de905f01e9b.js",
+    "precache-manifest.475c7ddcb3f89c004d6dc74b42f20f11.js": "/precache-manifest.475c7ddcb3f89c004d6dc74b42f20f11.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.5eb64777.chunk.css.map": "/static/css/2.5eb64777.chunk.css.map",
-    "static/css/main.ee5eb823.chunk.css.map": "/static/css/main.ee5eb823.chunk.css.map",
+    "static/css/2.9dd6fc35.chunk.css.map": "/static/css/2.9dd6fc35.chunk.css.map",
+    "static/css/main.f32135b0.chunk.css.map": "/static/css/main.f32135b0.chunk.css.map",
     "static/js/3.33822356.chunk.js.LICENSE.txt": "/static/js/3.33822356.chunk.js.LICENSE.txt",
     "static/media/babel.svg": "/static/media/babel.529bf9cd.svg",
     "static/media/styles.scss": "/static/media/cosmonaut.bb026ce2.png",
@@ -32,7 +32,6 @@
     "static/media/react.svg": "/static/media/react.e9f3d01c.svg",
     "static/media/rightArrow.svg": "/static/media/rightArrow.ac1495af.svg",
     "static/media/sass.svg": "/static/media/sass.88c10477.svg",
-    "static/media/global.scss": "/static/media/stars-2.7cd96097.png",
     "static/media/styled.png": "/static/media/styled.65bcf5e2.png",
     "static/media/trello.svg": "/static/media/trello.3c2970ca.svg",
     "static/media/typescript.svg": "/static/media/typescript.0ecd0125.svg",
@@ -41,9 +40,9 @@
     "static/media/world.svg": "/static/media/world.706d9614.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.146c5db1.js",
+    "static/js/runtime-main.a509c35d.js",
     "static/js/3.33822356.chunk.js",
-    "static/css/main.ee5eb823.chunk.css",
+    "static/css/main.f32135b0.chunk.css",
     "static/js/main.5ca6c57d.chunk.js"
   ]
 }
