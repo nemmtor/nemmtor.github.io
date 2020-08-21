@@ -70,7 +70,7 @@
       transform-origin: right;
     }
 
-    &:hover::before  {
+    &:hover::before {
       transform: translateX(15px) scaleX(1.2);
     }
   }
@@ -79,13 +79,14 @@
 .header__info {
   display: flex;
   flex-wrap: wrap;
+  width: 95%;
 
   &-item {
     padding: 2rem;
     flex: 1 1 250px;
     opacity: 0.8;
     position: relative;
-    border-top: 4px solid rgba(50,50,50, 0.5);
+    border-top: 4px solid rgba(50, 50, 50, 0.5);
 
     &::after {
       content: '';

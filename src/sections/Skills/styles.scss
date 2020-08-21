@@ -15,28 +15,17 @@
 .skills-type__title {
   margin-bottom: 3rem;
   font-weight: 400;
-  opacity: 0.8;
   position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 2px;
-    background: $secondary-color;
-    filter: brightness(1.2);
-  }
+  font-size: 1.5em;
 }
 
 .skills {
   &__list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    width: 100%;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    width: 90%;
+    gap: 4rem 0;
   }
 
   &__item {
@@ -46,7 +35,7 @@
   }
 
   &__icon {
-    height: 80px;
+    height: 6rem;
     margin-bottom: 0.5rem;
   }
 
