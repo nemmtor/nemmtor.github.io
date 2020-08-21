@@ -66,6 +66,15 @@
   letter-spacing: 0.08em;
   font-size: 1.3em;
   cursor: pointer;
+
+  &:disabled {
+    filter: saturate(0);
+  }
+}
+
+.form__greetings {
+  align-self: flex-start;
+  color: rgb(73, 255, 103);
 }
 
 @media (max-width: 770px) {
