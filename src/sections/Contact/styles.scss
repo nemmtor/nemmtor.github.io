@@ -67,3 +67,9 @@
   font-size: 1.3em;
   cursor: pointer;
 }
+
+@media (max-width: 770px) {
+  .form__container {
+    grid-template-columns: 1fr;
+  }
+}

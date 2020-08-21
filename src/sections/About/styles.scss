@@ -4,8 +4,8 @@
   max-width: 85%;
   margin-top: -6rem;
   &__img-container {
-    width: 250px;
-    height: 250px;
+    width: 25rem;
+    height: 25rem;
     border-radius: 50%;
     shape-outside: circle();
     float: right;
@@ -45,5 +45,15 @@
     padding: 0.5rem 1rem;
     background: $accent-color;
     border: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    margin-top: 0;
+  }
+  .about__img-container {
+    width: 15rem;
+    height: 15rem;
   }
 }

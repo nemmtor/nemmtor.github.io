@@ -27,3 +27,27 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .section {
+    width: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+  .section {
+    width: 85%;
+  }
+  .section__title {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .section {
+    width: 95%;
+  }
+  .section__title {
+    margin-bottom: 3rem;
+  }
+}
