@@ -2,27 +2,23 @@
 
 .project {
   display: flex;
-  width: 80%;
+  width: 70%;
   flex-direction: column;
   align-items: center;
-  position: relative;
   margin-bottom: 4rem;
-  overflow: hidden;
+  border: none;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &__image-container {
+    box-shadow: 0 0 2px 2px white;
+    margin-bottom: 0.5rem;
     position: relative;
     width: 100%;
-    height: 420px;
-    box-shadow: 0 0 2px 2px white;
+    height: 350px;
     transition: filter 0.5s ease;
-
-    &--blurred {
-      filter: blur(3px);
-    }
 
     &::after {
       content: '';
@@ -43,61 +39,13 @@
   }
 
   &__details {
-    padding: 4rem 3rem;
-    background: #111;
-    position: absolute;
-    bottom: 0;
+    padding: 3rem 2.5rem;
+    background: $main-color;
     width: 100%;
     color: $light-text-color;
-    transform: translateY(85%);
-    transition: transform 0.3s ease-out;
-
-    &--active {
-      transform: translateY(0);
-      .project__toggle img {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  &__toggle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #111;
-    border: none;
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transform-origin: left;
+    position: relative;
+    transform-origin: top;
     z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      height: 3rem;
-      transition: transform 0.2s ease;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      box-shadow: 0 0 5px 3px $accent-color;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-
-    &:hover::after {
-      opacity: 1;
-    }
   }
 
   &__title {
