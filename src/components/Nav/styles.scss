@@ -1,6 +1,5 @@
 @import '../../styles/settings.scss';
 
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -16,7 +15,6 @@
   width: 100%;
 
   box-shadow: 0 0 1px $light-text-color;
-
 
   &__brand {
     display: flex;
@@ -48,7 +46,6 @@
   border: none;
   cursor: pointer;
   position: relative;
-
 
   &-part {
     width: 100%;
@@ -124,7 +121,6 @@
       opacity: 0.9;
     }
 
-
     &:hover {
       &::after {
         transform: scaleX(1);
@@ -137,6 +133,12 @@
   color: $secondary-color;
   &::after {
     background: $light-text-color;
+  }
+}
+
+@media (max-width: 650px) {
+  .nav__list-item {
+    font-size: 2em;
   }
 }
 
