@@ -15,7 +15,7 @@ const Contact = () => {
       _replyto: form.mail.value,
       message: form.message.value,
     };
-    const res = await fetch('https://formspree.io/xzbjqazr', {
+    await fetch('https://formspree.io/xzbjqazr', {
       method: 'POST',
       body: JSON.stringify(body),
       mode: 'cors',
@@ -23,7 +23,6 @@ const Contact = () => {
         'Content-Type': 'application/json',
       },
     });
-    const resJson = await res.json();
     setIsFinished(true);
     setIsLoading(false);
   };

@@ -6,8 +6,6 @@ import {
   javascript,
   material,
   npm,
-  php,
-  presta,
   react,
   sass,
   styled,
@@ -27,16 +25,10 @@ const skillsData = [
       { name: 'git', icon: git },
       { name: 'styled components', icon: styled },
       { name: 'material ui', icon: material },
-    ],
-  },
-  {
-    title: 'I am currently learning',
-    skills: [
       { name: 'typescript', icon: typescript },
-      { name: 'php', icon: php },
-      { name: 'prestashop', icon: presta },
     ],
   },
+
   {
     title: 'Tools that I use',
     skills: [
