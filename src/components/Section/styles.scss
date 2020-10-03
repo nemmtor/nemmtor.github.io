@@ -4,26 +4,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
   width: 60%;
   margin: 0 auto;
+  &:last-of-type {
+    padding-bottom: 0;
+  }
 
   &__title {
     letter-spacing: 0.1em;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
     font-size: 2.5em;
     position: relative;
     z-index: 1;
-    &::before {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 50px;
-      height: 100%;
-      background: $secondary-color;
-      z-index: -1;
-      transform: rotate(-10deg) translateX(-25px);
+      top: 50%;
+      width: 35px;
+      height: 35px;
+      background-image: url('../../assets/rightArrowFat.svg');
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+    &::before {
+      left: -30px;
+    }
+    &::after {
+      right: -30px;
+      transform: translateY(-50%) rotate(180deg);
     }
   }
 }

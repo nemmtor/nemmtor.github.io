@@ -9,12 +9,13 @@
   padding: 2rem 0;
   opacity: 1;
   transition: opacity 0.2s 0.5s ease;
+  z-index: 100000;
 
   &--hidden {
     opacity: 0;
     transition: opacity 0.2s ease;
   }
-  
+
   &__bar {
     width: 2px;
     height: 100%;
@@ -43,23 +44,31 @@
     position: absolute;
     left: 30px;
     opacity: 0.5;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    &:hover {
+      color: $secondary-color;
+      opacity: 1;
+    }
   }
 
   &__section-name {
     opacity: 0;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    transition: transform .5s .2s ease, opacity .5s .2s ease;
+    transition: transform 0.5s 0.2s ease, opacity 0.5s 0.2s ease;
     transform: translateX(30px);
   }
-
 }
 
 .aside__section--active {
   .aside__section-index {
     opacity: 1;
     transform: translateX(-40px);
+    cursor: default;
+    &:hover {
+      color: $light-text-color;
+    }
   }
 
   .aside__section-name {
@@ -68,8 +77,7 @@
   }
 }
 
-
-@media (max-width: 900px){
+@media (max-width: 900px) {
   .aside {
     display: none;
   }

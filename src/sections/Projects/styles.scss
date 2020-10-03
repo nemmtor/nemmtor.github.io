@@ -12,8 +12,7 @@
   }
 
   &__image-container {
-    box-shadow: 0 0 2px 2px white;
-    margin-bottom: 0.5rem;
+    border: 1px solid $light-text-color;
     position: relative;
     width: 100%;
     transition: filter 0.5s ease;
@@ -41,6 +40,8 @@
     background: $main-color;
     width: 100%;
     color: $light-text-color;
+    border: 1px solid $light-text-color;
+    border-top: none;
     position: relative;
     transform-origin: top;
     z-index: 1000;

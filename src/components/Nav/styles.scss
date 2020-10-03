@@ -14,7 +14,7 @@
   z-index: 100000;
   width: 100%;
 
-  box-shadow: 0 0 1px $light-text-color;
+  box-shadow: 0 0 1px $secondary-color;
 
   &__brand {
     display: flex;
@@ -107,23 +107,19 @@
     border: none;
 
     &::after {
-      content: '';
+      content: url('../../assets/send.svg');
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 2em;
-      height: 100%;
+      left: -20px;
       z-index: -1;
-      background: $secondary-color;
-      transition: transform 0.1s linear;
-      transform: scaleX(0);
-      transform-origin: left;
-      opacity: 0.9;
+      transition: opacity 0.1s linear;
+      filter: drop-shadow(2px 2px 5px rgba(237, 159, 75, 0.4));
+      transform: rotate(35deg);
+      opacity: 0;
     }
 
     &:hover {
       &::after {
-        transform: scaleX(1);
+        opacity: 1;
       }
     }
   }
@@ -132,7 +128,7 @@
 .nav__list-item--active {
   color: $secondary-color;
   &::after {
-    background: $light-text-color;
+    filter: grayscale(100%) drop-shadow(2px 2px 5px rgba(133, 132, 132, 0.4));
   }
 }
 

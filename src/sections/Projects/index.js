@@ -40,7 +40,7 @@ const myProjects = [
   {
     title: 'Love Matcher App',
     description:
-      'App which will tell you if you and your crush match each other, made with React',
+      'App which will tell you if you and your crush match each other, made with React.',
     img: {
       src: lovematcher,
       alt: 'Mobile phone with opened app',

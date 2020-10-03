@@ -2,7 +2,6 @@
 
 .about {
   max-width: 85%;
-  margin-top: -6rem;
   &__img-container {
     width: 25rem;
     height: 25rem;
@@ -28,23 +27,10 @@
         display: inline-block;
         color: $secondary-color;
       }
-
-      &:first-child {
-        margin-top: 6rem;
-      }
       &:last-child {
         margin-bottom: 0;
       }
     }
-  }
-
-  &__cta {
-    cursor: pointer;
-    color: $light-text-color;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: $accent-color;
-    border: none;
   }
 }
 

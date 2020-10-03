@@ -1,20 +1,10 @@
 import gsap from 'gsap';
 import React, { useEffect } from 'react';
-import { scroller } from 'react-scroll';
 
 import './styles.scss';
-import { SCROLL_DURATION, SCROLL_OFFSET } from 'scrollconfig';
 import { me } from 'assets';
 
 const About = () => {
-  const handleCtaClick = () => {
-    scroller.scrollTo('contact', {
-      duration: SCROLL_DURATION,
-      offset: SCROLL_OFFSET,
-      smooth: true,
-    });
-  };
-
   useEffect(() => {
     gsap.from('.about__text-part > strong', {
       y: 20,
@@ -37,7 +27,7 @@ const About = () => {
       <p className="about__text">
         <span className="about__text-part">
           Hi, my name is Kacper Witas, I&apos;m 26 years old{' '}
-          <strong>IT passionate</strong>, based in Toruń, Poland. I&apos;m{' '}
+          <strong>IT passionate</strong>, based in Toruń, Poland. I&apos;m a{' '}
           <strong>happy father</strong> of two wonderful kids. Currently on my
           last year of IT engineering studies at WSB University.
         </span>
@@ -53,11 +43,7 @@ const About = () => {
         <span className="about__text-part">
           My biggest goal at the moment is to find my first webdev related job
           so I can become a professional developer and do what I love for the
-          living. I&apos;m sure I&apos;ll fit perfectly in your company, so
-          please dont hestitate and{' '}
-          <button className="about__cta" onClick={handleCtaClick} type="button">
-            contact me
-          </button>
+          living. I&apos;m sure I&apos;ll fit perfectly in your company.
         </span>
       </p>
     </article>

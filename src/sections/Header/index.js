@@ -70,21 +70,21 @@ const Header = ({ id }) => {
           <h2 className="header__info-header">With high standards</h2>
           <p className="header__info-text">
             Getting really good at what I do is my goal. I want to become
-            professional developer
+            professional developer.
           </p>
         </article>
         <article className="header__info-item">
           <h2 className="header__info-header">With passion</h2>
           <p className="header__info-text">
             I just love coding. It gives me the feeling of happiness and
-            self-fulfillment
+            self-fulfillment.
           </p>
         </article>
         <article className="header__info-item">
           <h2 className="header__info-header">With Loyalty</h2>
           <p className="header__info-text">
             I want to find a place where I can stay for a long time and become
-            important part of a dev team
+            important part of a dev team.
           </p>
         </article>
       </section>

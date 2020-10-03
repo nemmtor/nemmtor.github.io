@@ -16,7 +16,7 @@ import {
 
 const skillsData = [
   {
-    title: 'I feel confident with',
+    title: 'My tech stack',
     skills: [
       { name: 'html5', icon: html },
       { name: 'css3/scss', icon: sass },
