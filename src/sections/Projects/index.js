@@ -1,7 +1,11 @@
 import React from 'react';
 
 import { html, sass, javascript, php, react, styled } from 'assets/tech-icons';
-import { lovematcher, luxremonty } from 'assets/projects-images';
+import {
+  lovematcher,
+  luxremonty,
+  interactiveagency,
+} from 'assets/projects-images';
 
 import Project from './Project';
 import './styles.scss';
@@ -34,6 +38,32 @@ const myProjects = [
       {
         src: php,
         alt: 'php',
+      },
+    ],
+  },
+  {
+    title: 'Interactive agency',
+    description: 'Single page website coded from free psd',
+    img: {
+      src: interactiveagency,
+      alt: '2 monitors with open website',
+    },
+    urls: {
+      repo: 'https://github.com/nemmtor/interactive-agency',
+      live: 'https://nemmtor.github.io/interactive-agency',
+    },
+    stack: [
+      {
+        src: html,
+        alt: 'html',
+      },
+      {
+        src: sass,
+        alt: 'sass',
+      },
+      {
+        src: javascript,
+        alt: 'javascript',
       },
     ],
   },
